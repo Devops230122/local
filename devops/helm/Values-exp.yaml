@@ -1,0 +1,64 @@
+# replicaCount: 3
+
+imagePullPolicy: Always
+
+AZURE_SERVICE_BUS_TOPIC_NAME: sbt-bsl-exp-weu-01
+AZURE_SERVICE_BUS_NAME_SPACE_NAME: sbn-bsl-exp-weu-01
+AZURE_SERVICE_BUS_TOPIC_SUBSCRIPTION_NAME: evgt-sub-bsl-exp-weu
+AZURE_SERVICE_BUS_TOPIC_SHARED_POLICY_NAME: sas-bsl-exp-weu-01
+ENDPOINTS_LOGGING_ENABLED: true
+ENDPOINTS_LOGGING_INCLUDE_METHOD_ARG: true
+
+ports:
+  containerPort: 8080
+  servicePort: 80
+  targetPort: 8080
+
+rollingUpdate:
+  maxSurge: 30%
+  maxUnavailable: 0
+
+spec:
+  minReplicas: 3
+  maxReplicas: 6
+
+probes:
+  livenessProbePath: '/localization-service/actuator/health/liveness'
+  readinessProbePath: '/localization-service/actuator/health/readiness'
+  readinessinitialDelaySeconds: 85
+  livenessinitialDelaySeconds: 95
+  timeoutSeconds: 15
+  periodSeconds: 10
+
+resources:
+  target:
+    memoryAverageUtilization: 70
+    cpuAverageUtilization: 90
+  requests:
+    cpu: 250m
+    memory: 512M
+  limits:
+    cpu: 500m
+    memory: 1024M
+
+scaleDown:
+  policies: 
+    pods:
+      periodSeconds: 60
+      value: 1
+    value: 60
+    periodSeconds: 90
+
+scaleUp: 
+  policies: 
+    value: 90
+    periodSeconds: 90
+
+image: acrbslexpweu01.azurecr.io/localization
+tag: exp-11_07_2022-07_21
+
+AZURE_COSMOS_DB_NAME: localization
+
+keyVaultName: kv-bsl-exp-weu-01
+
+secrets: ['APPLICATIONINSIGHTS-CONNECTION-STRING', 'AZURE-MONGO-CONNECTION-STRING','AZURE-SERVICE-BUS-TOPIC-SHARED-POLICY-VALUE','AZURE-STORAGE-CONNECTION-STRING']

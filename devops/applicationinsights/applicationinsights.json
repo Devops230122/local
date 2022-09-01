@@ -1,0 +1,17 @@
+{
+    "instrumentation": {
+      "logging": {
+        "level": "ALL"
+      },
+      "micrometer": {
+        "enabled": true
+      },
+      "heartbeat": {
+        "intervalSeconds": 60
+      },
+      "preview": {
+        "captureHttpServer4xxAsError": false,
+        "metricIntervalSeconds": 60
+      }
+    }
+  }

@@ -1,0 +1,58 @@
+testMethods:
+  whenAddTranslationRequestReceived_thenTranslationSavedToDB:
+    parameters:
+      brand: brand
+      language: language
+      translation:
+        translation:
+          key_1: "english_value"
+          level_1:
+            key_2 : "english_value"
+            level_2 :
+              key_3: "english_value"
+      batchUpdate:
+        updates: [ {
+          key: "level_1/level_2/key_3",
+          value: "new_english_value"
+        } ]
+      translationId: brand-language
+      newKeyValue: new_english_value
+  whenBatchUpdateTranslationRequestReceived_thenTranslationSavedToDB:
+    parameters:
+      brand: brand
+      language: language
+      translation:
+        translation:
+          key_1: "english_value"
+          level_1:
+            key_2: "english_value"
+            level_2:
+              key_3: "english_value"
+              level_3:
+                key_4: "english_value"
+                level_4:
+                  key_5: "english_value"
+                  level_5:
+      batchUpdate:
+        updates: [ {
+          "key": "level_1/key_2",
+          "value": "new_english_value"
+        },
+          {
+            "key": "level_1/level_2/key_3",
+            "value": "new_english_value"
+          } ]
+      translationId: brand-language
+      newKeyValue: new_english_value
+  whenBatchUpdateTranslationForSameBrandAndDifferentLanguageRequestReceived_thenCacheCorrectlyUpdated:
+    parameters:
+      brand: brand
+      language: language
+      translation:
+        translation:
+          key_1: "english_value"
+          level_1:
+            key_2 : "english_value"
+            level_2 :
+              key_3 : "english_value"
+              level_3 :

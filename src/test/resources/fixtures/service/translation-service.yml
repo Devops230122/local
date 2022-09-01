@@ -1,0 +1,19 @@
+testMethods:
+  whenSaveTranslationCalled_thenTranslationSavedToDBAndCache:
+    parameters:
+      translation:
+        id:
+          id: brand-language
+          brand: brand
+          language: language
+        translation:
+      translationDocument:
+        brand: brand
+        language: language
+        translation:
+      translationString :
+        key_1: "english_value"
+        level_1:
+          key_2 : "english_value"
+          level_2 :
+            key_3: "english_value"

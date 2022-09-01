@@ -1,0 +1,1803 @@
+testMethods:
+  whenGetBrandTranslationAsFile_thenReturnTranslationAsFile:
+    parameters:
+      brand: testBrand
+      translation:
+        id:
+          id: hm-ar
+          brand: hm
+          language: ar
+        brand: hm
+        language: ar
+        translation:
+          resetPassword:
+            newPasswordInputLabel: ar_New Password
+            confirmNewPasswordInputLabel: ar_Confirm New Password
+            submit: ar_Submit
+            message: ar_Your password has been changed
+            messageDescription: ar_Login using it to enjoy your personalized experience
+          favourites:
+            emptyTitle: لم تقم بحفظ أي منتجات بعد
+            emptyDescription: |-
+              تمكن من حفظ المنتجات بشكل دائم، والتفاعل مع أي منتج تريد من
+              خلال تسجيل دخولك، أو إنشاء حساب
+            continueShopping: تابع التسوق
+            moveToBag: انتقل إلى الحقيبة
+            colour: 'ar_Colour: '
+            size: ar_Size
+            messages:
+              maximumFavorites: ar_Sorry, we can't add this item. Please remove an existing
+                item from your favourites list and try again.
+              favoritesSizeError: ar_Sorry, your favourites limit has been exceeded. Please
+                review your favourites before moving to shopping bag.
+              itemRemoved: ar_Item has been removed.
+          eGift:
+            cardNumberTitle: ar_Please specify your eGift Card number to use it
+            cardNumberInputLabel: ar_eGift Card Number
+            otpTitle: ar_Please enter OTP sent to email linked with eGift Card
+            otpInputLabel: ar_Verification Code
+            otpNotReceived: ar_Didn’t recieve OTP code?
+            resendTitle: ar_Didn't receive OTP code?
+            resend: ar_RE-SEND
+            useAnotherCard: ar_Use another card
+            amountTitle: ar_Amount you want to spend
+            paidTitle: ar_Will be paid with eGift card
+            remainPaidTitle: ar_Remains to Pay
+            addSuccessMessage: ar_eGift Card Verified and Added
+            remainCardBalance: ar_Card balance after payment will be {{balance}}
+            willBePaidSubtitle: ar_Will be paid with eGift card
+            canBePaidSubtitle: ar_Can be paid with eGift card
+            removeEgift: ar_Remove eGift card
+            removeSuccessMessage: ar_eGift card has been removed from checkout
+            extraPaymentMessage: ar_Pay {{price}} using another payment option to complete
+              purchase
+            checkBalanceAnotherCard: ar_Check Balance or Top Up Another eGift Card
+            availableAmount: ar_Available Amount
+            eGiftCard: ar_eGift Card
+            expiresOn: ar_Expires on
+            nullBalanceLinked: ar_You have eGift card linked. Card balance is AED 0. Top up
+              to use it
+            nullBalanceLinkedMessage: ar_Card balance is {{balance}}. Top up it to use
+            expiredLinked: ar_You linked eGift card expired. Add another one to use
+            expiredLinkedMessage: ar_eGift card expired and cannot be used
+          emailVerification:
+            description: ar_Let’s check if you have an account with us...
+            button: ar_Submit
+          about:
+            followUs: تابعنا
+            privacy_policy: سياسة خاصة
+            termsConditions: الأحكام والشروط
+          storeDetails:
+            holiday: ar_Holiday
+            getDirections: ar_Get directions
+          navigation:
+            home: الصفحة الرئيسية
+            productList: قائمة المنتجات
+            localization: الموقع
+            settings: إعدادات التطبيق
+            productCategories: البحث
+            favourites: مفضلتي
+            moreHome: حسابي
+            moreSettings: إعدادات
+            languageSettings: لغة
+            countrySettings: الدولة
+            productsFilters: الفرز والترتيب
+            productDetailInfo: جتنملا ليصافت
+            deliveryOptions: خيارات التوصيل
+            secureCheckout: ar_Secure Checkout
+            mainHome: المنزل
+            magazineDetails: مجلة
+            signIn: ar_Sign in / Register
+            myAccountHome: ar_My Account
+            emailVerification: ar_Let's Check
+            register: كباسح ئشنأ
+            shoppingCart: سلة التسوق
+            shoppingCartCoupon: ar_Apply Promo Code
+            resetPassword: ar_Change Password
+            changePassword: ar_Change Password
+            secureCheckoutPaymentMethod: ar_Payment Method
+            secureCheckoutAddPaymentCard: ar_Add Payment Card
+            forgotPassword: ar_Forgot Password?
+            signInWithEmail: ar_Sign in
+            homeDelivery: ar_Home Delivery
+            myOrders: ar_My Orders
+            addressBook: نيوانعلا ليلد
+            editAddress: ar_Edit Address
+            myDetails: ar_My Details
+            shoppingCartDetails: ar_Products
+            shippingMethod: ar_Shipping Method
+            billingAddress: ar_Billing Address
+            paymentMethods: ar_Payment Methods
+            orderDetails: ar_Order Details
+            mapClickAndCollect: ar_Click&Collect
+            completeRegistration: ar_completeRegistration
+            storeDetails: ar_Location Details
+            helpSupport: ar_Help & Support
+            eGiftAdd: ar_Add eGift Card
+            eGiftVerify: ar_Verify eGift Card
+            eGiftAmount: ar_Specify Amount
+            eGiftBalance: ar_eGift Card
+            eGiftRedeemedAmount: ar_Specify Amount
+            secureCheckoutPaymentCards: ar_My Payment Cards
+            eGiftAmountOTP: ar_Confirm spending
+            returnsAndRefunds: ar_Returns and Refunds
+            giftCardPersonalisationOptions: ar_Card Personalisation
+            giftCardPersonalisationOther: ar_Card Personalisation
+            privacyPolicy: ar_Privacy Policy
+            termsAndConditions: ar_Terms and Conditions
+            appTermsAndConditions: ar_App Terms and Conditions
+            saleTermsAndConditions: ar_Terms and Conditions of Sale
+            about: معلومات عنا
+            externalPaymentMethods: ar_Payment Details
+            promotions: ar_Promotions
+            deliveryInformation: ar_Delivery Information
+            sizeGuide: ar_Size Guide
+            faqs: ar_FAQs
+            storeLocator: ar_Store Locator
+            contactUs: اتصل بنا
+            productDetailsDeliveryShippingInfo: ar_Delivery Information
+            orderConfirmationCartDetails: ar_My Order
+          signInWithEmail:
+            title: ar_Looks like we already know you {{email}}. Enter your password.
+            buttonTitle: ar_Sign in
+            inputLabel: ar_Password
+            forgotPassword: ar_Forgot password?
+            error: ar_Wrong password. Try again or click Forgot password to reset it.
+          eGiftCard:
+            cardPersonalization: إضفاء الطابع الشخصي على البطاقة
+            other: آخر
+            amount: المبلغ درهم
+            enterValue: ar_Enter your value
+            selectOption: ar_Select a personalization option
+            title: بطاقة الشايع الإلكترونية
+            cardStyle: نمط البطاقة
+            giftFor: هذه هدية ل
+            forMe: ar_This is for me, {{email}}
+            cardAddedTitle: وأضافت البند إلى حقيبة التسوق
+            cardAddedDescription: سنعقده لمدة ساعة!
+          payment:
+            subTotal: ar_Sub total
+            discount: ar_Discount
+            deliveryFee: ar_Delivery fee
+            standardDelivery: ar_Standard delivery
+            ArrivesIn: ar_Arrives in {{days}} days
+            total: ar_Total
+            label: ar_M.H. Alshaya H&M
+            KWD: ar_KWD
+          productFilters:
+            sortBy: Sort By(ar)
+            button:
+              results: "{{productsCount}} النتائج"
+              save: حفظ
+              clear: إلغاء
+              selectAll: اختر الكل
+          giftCardPersonalisationOther:
+            title: ar_Please enter information about a person whom are you going to give a
+              gift
+            from: ar_From Whom
+            name: ar_Recipient Name
+            email: ar_Recipient Email
+            message: ar_Personalized Message
+          orderDetailsStatus:
+            steps:
+              home_delivery:
+                - title: ar_Order Confirmed
+                  subnote: ar_Order placed on {{orderCreationDate}}
+                - title: ar_Processing
+                  subnote: ar_Your order is being prepared
+                - title: ar_Dispatched
+                  subnote: 'ar_Delivering by {{carrierName}}, track id: {{trackId}}'
+                - title: ar_Delivered
+                  subnote: ar_Arrived on {{arrivalDate}}
+              ship_to_store:
+                - title: ar_Order Confirmed
+                  subnote: ar_Order placed on {{orderCreationDate}}
+                - title: ar_Processing
+                  subnote: ar_Your order is being prepared
+                - title: ar_Ready for Collection
+                  subnote: ar_Collect at {{storeName}}, {{storeAddress}}
+                - title: ar_Collected
+                  subnote: ar_Collected on {{collectionDate}}
+              virtual:
+                - title: ar_Order Confirmed
+                  subnote: ar_Order placed on {{orderCreationDate}}
+                - title: ar_Processing
+                  subnote: ar_Your order is being prepared
+                - title: ar_Collected
+                  subnote: ar_Collected on {{collectionDate}}
+          addressBook:
+            emptyTitle: نآلا ىتح ناونع يأ ظفحت مل
+            emptyDescription: |-
+              احفظ العناوين في حسابك لتستمتع بالدفع بشكل أسرع. يمكنك
+              إضافة أو تحديث أو حذف عنوان في أي وقت.
+            addNewAddress: أضف عنوان جديد
+            addAddress: ar_Add Address
+            savedAddresses: ar_Saved Addresses
+            editAddress: ar_Edit Address
+            deleteAddress: ar_Delete Address
+            setAsDefault: ar_Set as default address
+            defaultAddressLabel: ar_Default
+            selectAction: ar_Select Action
+            deleteAddressModalTitle: ar_Are you sure you want to delete your address?
+            deleteAddressModalSubtitle: ar_This action cannot be undone.
+            cancel: ar_Cancel
+            messages:
+              setAsDefaultSuccess: ar_Your address has been updated!
+              deleteAddressSuccess: ar_Your address has been deleted!
+              editSuccess: ar_Your address has been updated!
+          validation:
+            emptyEmail: ar_Please enter your Email address
+            invalidEmail: ar_Please provide valid email
+            confirmPasswordMatch: ar_Passwords do not match
+            invalidPassword: ar_The password does not satisfy the password policies
+            emptyPassword: ar_Password field is required
+            emptyFirstName: ar_Please enter your First Name
+            invalidFirstName: ar_Please provide valid First Name
+            emptyLastName: ar_Please enter your Last Name
+            invalidLastName: ar_Please provide valid Last Name
+            emptyMobile: ar_Please enter your Mobile
+            invalidMobile: ar_Please provide valid Mobile
+            passwordTints:
+              min8: 8 أحرف بحد أدنى
+              specialCharacter1: حرف خاص
+              upperCase1: ar_1 Uppercase
+              number1: رقم واحد
+              noSpaces: بدون مسافات
+            invalidNumber: ar_Please enter a valid phone number
+            pleaseProvideValidFirstName: ar_Please provide valid First Name
+            pleaseEnterYourFirstName: ar_Please enter your First Name
+            pleaseProvideValidLastName: ar_Please provide valid Last Name
+            pleaseEnterYourLastName: ar_Please enter your Last Name
+            isNotBeEmpty: ar_Is Not Be Empty
+            invalidCreditCard: ar_Invalid card number
+            emptyCreditCard: ar_Card number field is required
+            invalidExpiryDate: ar_Invalid expiry date
+            emptyExpiryDate: ar_Expiry date field is required
+            emptyCvv: ar_CVV field is required
+            isNotValid: ar_Is not valid
+            noEnoughMoneyOnCard: ar_Cannot be higher than available
+            giftCardMessageMax: ar_Maximum 200 characters
+            invalidCardOtp: ar_Invalid verification code. Try again
+            contactMobileNumber: ar_Please enter your Mobile Number
+            contactOrderNumber: ar_Please enter your Order Number
+            contactMissingItem: ar_Please enter your Missing items
+            contactMessage: ar_Please enter your message
+          shopping_cart:
+            quantity: 'الكمية:'
+            quantityLabel: ar_Label
+            updateInBag: ةبيقحلا يف ثيدحتلا
+            checkout: إتمام عملية الشراء
+            total: مجموع
+            subTotal: ar_Sub Total
+            discount: ar_Discount
+            discountDescription: ar_You saved
+            total_explain: "(تضمين ضريبة القيمة المضافة. باستثناء التسليم)"
+            add_promo: أضف الرمز الترويجي
+            outOfStock: نفد المخزون
+            moveToFavourites: ar_Move to favourites
+            errorPromptLine1: ar_Sorry, this item is out of stock.
+            errorPromptLine2: ar_Try to choose different size or color.
+            lowStock: ar_Going fast! Only {{availableQuantity}} in stock online
+            undo: إلغاء
+            removedFromBag: تمت إزالة العنصر
+            outOfStockModalTitle: لديك عناصر من المخزون في عربة التسوق
+            outOfStockModalText: بعض المنتجات في عربة التسوق الخاصة بك غير متوفرة. سنقوم بحذفها
+              بعد المتابعة إلى إتمام عملية الشراء.
+            outOfStockModalGoToCheckout: اذهب إلى إتمام عملية الشراء
+            outOfStockModalBackToCart: العودة إلى عربة التسوق
+            partiallyOutOfStock: ar_Partially out of stock
+            outOfStockError: ar_Sorry, the products in your cart are not available. You can
+              move them to Favourites to access them easily when they are back in stock.
+            outOfStockWarning: ar_Sorry, some products in your cart are not available. You
+              can adjust these in the Bag or move to Favourites to access them easily when
+              they are back in stock.
+            moveAllToFavourites: ar_Move all to favourites
+            savedToFavourites: ar_Saved to favourites
+            availableSectionHeader: ar_Available products
+            unavailableSectionHeader: منتجات غير متوفرة
+            updateItemsQuantity: ar_Some products have been removed from your cart.
+            discountValue: You saved {{balance}}
+            addCouponHeader: ar_Enter it and earn promotions and discounts on your shopping
+              bag.
+            addCouponTitle: ar_Promo Code
+            addCouponMessage: ar_You have applied the promo code
+            removeCouponMessage: ar_You have removed the promo code
+            invalidPromoCode: ar_The promo code you entered is not valid
+          contactUs:
+            communicationChannel: حدد قناة الاتصال المفضلة لديك
+            firstName: الاسم الأول
+            lastName: الكنية
+            mobile: رقم الهاتف المحمول
+            email: عنوان البريد الإلكتروني
+            feedback: حدد التعليقات
+            type: اختر صنف
+            reasons: حدد الأسباب
+            orderNumber: رقم الأمر
+            missingItem: عناصر مفقودة
+            message: رسالتك
+            button: ظفحي
+            emailCommunication: بريد الالكتروني
+            mobileCommunication: متحرك
+            successTitle: شكرا لك على التواصل
+            successDescription: سنعود إليك في أقرب وقت ممكن.
+            successButton: ظفحي
+          settings:
+            push_notifications:
+              title: دفع الإخطارات
+              description: "‏ H&M‬ تفعيل تحديثات الأخبار من"
+            selector_section:
+              title: الإعدادات الإقليمية
+            communication:
+              title: ar_Communication Preferences
+              description: ar_Email Newsletter
+            language: لغة
+            country: دولة
+            biometricOptions: ar_Biometric Options
+            enableFaceId: ar_Enable Face Id
+            enableTouchId: ar_Enable Touch Id
+            enableBiometrics: ar_Enable Biometrics
+          helpSupport:
+            contact: ar_Contact Us
+            delivery: ar_Delivery information
+            return: ar_Return and Refunds
+            faq: ar_FAQs
+          giftCardPersonalisationForMe:
+            title: ar_Please specify name and email where we should send your eGift card
+            name: ar_Name
+          orderSummary:
+            orderSummary: ملخص الطلبية
+            totalPaid: ar_Total Paid
+            placed: ar_Placed
+            orderNo: ar_Order No
+            orderDate: ar_Order Date
+          version: الإصدار
+          regular_text: نص افتراضي ، بعض النصوص. نص افتراضي ، بعض النصوص
+          eGiftLanding:
+            buy: ar_Buy eGift card
+            link: ar_Link to account
+            styles:
+              title: ar_Alshaya eGift Cards
+              subtitle: ar_Let your loved ones enjoy the freedom of choice with the Alshaya
+                eGift Card - the perfect gift for your friends, colleagues and loved ones.
+            checkBalance:
+              title: ar_Check Card Balance
+              subtitle: ar_Keep loading your eGift card balance to use it for your purchase
+              name: ar_Check Balance
+            topUp:
+              title: ar_Top Up Card
+              subtitle: ar_Choose any of our available value options or enter a custom amount.
+              name: ar_Top Up Card
+            descriptions:
+              title: ar_Reasons you'll love our eGift cards
+              items:
+                - icon: https://ae.hm.com/sites/g/files/bndsjb1551/files/2022-04/group-8%403x.png
+                  header: ar_A card for every occasion
+                  description: ar_Pick the perfect card from a variety of options & designs
+                - icon: https://ae.hm.com/sites/g/files/bndsjb1551/files/2022-03/group-8-copy%403x%201.21.23%20PM.png
+                  header: ar_Use it online and in-store
+                  description: ar_Pay for your online order using your eGift card or in-store
+                - icon: https://ae.hm.com/sites/g/files/bndsjb1551/files/2022-03/group%403x%201.21.23%20PM.png
+                  header: ar_12 month validity
+                  description: ar_All eGift cards are valid for 12 months from the date of purchase
+                - icon: https://ae.hm.com/sites/g/files/bndsjb1551/files/2022-03/group-9-copy%403x%201.21.23%20PM.png
+                  header: ar_Link to Account
+                  description: ar_You can link your eGift card to your account for quick & easy
+                    shopping
+            faqs:
+              title: ar_eGift cards FAQs
+              items:
+                - title: ar_Where can I get my eGift card?
+                  description: ar_You can purchase an H&M eGift card directly from our sites.
+                    Choose one of the many colorful designs we have for your special occasion,
+                    whether it be for a friend, a partner, a family member, or yourself.
+                - title: ar_How fast will my eGift card be received?
+                  description: ar_Your eGift card will be sent to the recipient’s email immediately
+                    after your purchase. They will receive a confirmation email containing their
+                    eGift card number along with a scannable QR code that can be used at any
+                    of our stores. To make any online purchases, simply enter the eGift card
+                    number at the checkout page. \n  \nThe eGift card can be linked by clicking
+                    on the Link to Account button. It can then be accessed when logged in through
+                    our site or app.
+                - title: ar_Where can I use my eGift card?
+                  description: ar_You can use your eGift card at your nearest H&M store or online
+                    through our sites and apps. If you would like to gift it to someone living
+                    in another country within the region, please make sure you purchase it from
+                    our site in that country. Our e-gift cards are single currency – you cannot
+                    use them to purchase items from other countries.
+                - title: ar_Does the eGift card have a value limit?
+                  description: ar_We offer multiple value options for you to select from or
+                    you can enter a custom amount instead.
+                - title: ar_Can I use my eGift card at any H&M store or just online?
+                  description: ar_You can use your H&M eGift card at any of our stores by showing
+                    your QR code at the checkout counter. You can access it through your email
+                    or by logging into your account through our site or app.
+                - title: ar_How can I top up my eGift card or check its balance?
+                  description: ar_You can do that through the 'Check Balance' and 'Top Up Card'
+                    buttons on our eGift Card page. You can top up your card by selecting one
+                    of our available value options or by entering a custom amount, which will
+                    be reflected immediately after checkout.
+                - title: ar_How can I send an eGift card to someone?
+                  description: |-
+                    ar_1. Select a design of your liking, depending on the occasion.
+                    
+                     2. Select a value option or enter the custom amount that you would like.
+                    
+                    3. Select who you will be purchasing the eGift card for.
+                    
+                    4. Enter their details.
+                    
+                    5. You also have the option of leaving them a heartfelt message.
+          input:
+            email: ar_Email
+            WeNeedYourEmail: ar_We need your email to send you your order receipt
+          country_selection:
+            header: اختر الدولة
+            save: يحفظ
+          trending_searches:
+            title: عمليات بحث رائجةًً
+          orderConfirmation:
+            continueShopping: ar_Continue shopping
+            youMayAlsoLike: ar_You may also like
+            needSupport: ar_Need Support
+            VisitFAQ: ar_Visit out FAQ and Help section
+          giftCardPersonalisationOptions:
+            selectOption: ar_Select Personalization Option
+            gift: ar_This is a gift
+            forMe: ar_This is for me
+          listItemsCounter:
+            items: "{{count}} قطع"
+            item: "{{count}} ar_Item"
+          mapView:
+            deliveryAddress: ar_Delivery Address
+            editManually: ar_Edit manually
+            adjustPin: ar_Adjust pin
+            save: ar_Save
+            confirmPin: ar_Confirm Location Pin
+            pinError: ar_Pin outside of delivery area
+            tip: ar_Move pin to adjust
+            shareLocation: ar_Share current location
+            viewLocation: ar_View current location
+            pinPoint: ar_Pin point location on map
+            pleaseSelect: ar_Please select your {{fieldName}}
+            pleaseEnter: ar_Please enter your {{fieldName}}
+            searchPlaceholder: ar_Start typing to search
+            additionalDetailsPlaceholder: ar_Add zip code, landmark, floor, apartment, etc.
+          myOrders:
+            emptyTitle: |-
+              ar_You haven’t placed any orders
+              yet
+            emptyTitleHistory: |-
+              ar_You don’t have any
+              completed orders yet
+            emptyDescription: |-
+              ar_Once you’ve placed an order, the summary of
+              the order will be saved here for you.
+            emptyDescriptionHistory: |-
+              ar_Once you’ve an order completed, it will be listed
+              here.
+            startShopping: ar_Start shopping
+            activeOrders: ar_Active Orders
+            ordersHistory: ar_Orders History
+          change_language_button: تغيير اللغة
+          products:
+            promoLabelSave: ar_(save {{percent}}%)
+            selectSize: أضف إلى السلة
+            outOfStock: نفد المخزون
+            inStock: ةيلاملا قاروألا يف
+            add: فضأ
+            addToBag: أضف إلى السلة
+            sizeSelectorErrorText: ar_Please select Size before choosing store
+            sizeGuide: تاساقملا ليلد
+            notificationText: وأضافت البند إلى حقيبة التسوق. سنعقده لمدة ساعة!
+            viewBag: حقيبة عرض
+            addToShoppingCart:
+              errors:
+                '400':
+                  ERROR_CART_ITEM_PURCHASE_LIMIT:
+                    text: _Sorry, you have reached the purchase limit for the product
+                  ERROR_CART_ITEM_OUT_OF_STOCK:
+                    text: _Sorry the product you are trying to add went out of stock. Please
+                      try a different product
+                '500':
+                  text: _Something went wrong while adding your product. Please, try again
+                    later
+            returnsAndRefunds: ar_Returns and Refunds
+            productDetails: ar_Product Details
+            nonRefundableLabel: ar_Please note this product is not refundable
+            attributes:
+              articleNumber: ar_Article Number
+              product_feature: ar_Product Feature
+              concept: ar_Concept
+              product_environment: ar_Product Environment
+              article_pattern: ar_Article Pattern
+              article_visual_description: ar_Article Visual Description
+              washing_instructions: ar_Washing Instructions
+              style: ar_Style
+              clothing_style: ar_Clothing Style
+              neckline_style: ar_Neckline Style
+              collar_style: ar_Collar Style
+              fit: ar_Fit
+              descriptive_length: ar_Descriptive Length
+              sleeve_length: ar_Sleeve Length
+              garment_length: ar_Garment Length
+              waist_rise: ar_Waist Rise
+              composition: ar_Composition
+            buyTogetherRecommendationsTitle: ar_Complete Your Look
+            similarRecommendationsTitle: ar_You May Also Like
+            recentlyViewed: ar_Recenlty Viewed
+            vatNote: ar_All prices are inclusive of 14% VAT. Products & services that are
+              zero rated are exempt.
+            deliveryOptions: ar_Delivery Options
+            clickAndCollect: ar_Click and Collect
+            findCollectionStore: ar_Find collection store
+            notAvailable: ar_(Not available)
+          no_search_results:
+            title: نعتذر منك!
+            text: ar_We didn’t find any search results for your search on
+          termsAndConditions:
+            app: ar_App Terms and Conditions
+            sale: ar_Terms and Conditions of Sale
+          button:
+            continue: ابدأ التسوق
+            remove: إزالة
+            continueAsGuest: ar_Continue as guest
+            save: ar_SAVE
+            verify: ar_Verify
+            confirm: ar_Confirm
+            apply: ar_Apply
+            topUp: ar_Top Up
+          permissions_request:
+            enable_tracking_title: تمكين التتبع
+            allow_tracking_text: اختر "السماح بالتتبع" على الشاشة التالية للحصول على تجربة
+              تسوق مخصصة.
+            allow_personalised_offers_text: احصل على عروض مخصصة وتوصيات المنتج والعروض الترويجية
+              الحصرية
+            allow_notification_text: تلقي إشعار وتحديث لطلبك
+          forgotPassword:
+            description: ar_Please enter the email address you used to create your account,
+              and we'll send you a link to reset your password.
+            button: ar_Submit
+            message: ar_If your account is valid, an email will be sent with instructions
+              to reset your password.
+          security:
+            error:
+              title: Error
+              button: Ok
+              policy: Your device is not compatible with the app security policies
+          common:
+            item: "{{items}} ar_item"
+            items: "{{items}} دونب"
+            color: اللون
+            size: المقاس
+            qty: الكمية
+            default: ar_Default
+            expirationDateShort: ar_Exp ({{date}})
+            selectAction: ar_Select Action
+            errors:
+              default:
+                text: ar_Something went wrong
+            permissions:
+              locationPermissionTitle: ar_Enable Location Services
+              locationAppPermissionText: ar_Please go to Settings and enable location services
+                for App
+              locationDevicePermissionText: ar_Please, enable location service in your system
+                settings
+              locationPermissionCancel: ar_Cancel
+              locationPermissionOk: ar_Ok
+              locationPermissionSettings: ar_Go to settings
+              requestFaceIdPermissionsBody: ar_You can change your biometric option within
+                the App Settings
+              faceIdPermissionsTitle: ar_Enable Face ID
+              faceIdPermissionsBody: ar_To enable Face ID, you have to enable from device
+                settings
+              dontAllow: ar_Don’t Allow
+              allow: ar_Allow
+              login: ar_Login
+            add: إضافة
+            checkout: إتمام عملية الشراء
+          flow_summary:
+            title: حقيبتك فارغة
+            description: كن مصدر إلهام واكتشف شيئًا جديدًا في أحدث منتجاتنا. تبقى العناصر
+              في حقيبتك لمدة 60 دقيقة ثم يتم نقلها إلى المفضلة.
+            continue_shopping: مواصلة التسوق
+            view_my_favourites: عرض المفضلة
+            thank_for_order: ar_Thank you for your order!
+            order_will_be_sent_to: |-
+              ar_Your order has been placed
+              and receipt will be sent to {{email}}.
+            complete_registration: ar_Complete Registration
+            complete_registration_benefits: ar_Complete registration to get member benefits
+            receive: ar_Receive
+            discount: ar_10% discount
+            off_your_first_order: ar_off your first order
+            save_your_details: ar_Save your details for
+            faster_checkout: ar_faster checkout
+            tracked_orders: ar_Tracked orders
+            and: ar_and
+            free_delivery: ar_free delivery
+            viewMyOrder: ar_View my order
+          myDetails:
+            mobile: ar_Mobile number
+            email: ar_Email address
+            button: ar_Save changes
+            notification: ar_Your changes have been saved
+          input_placeholder: إدخال عنصر نائب للنص
+          paymentMethods:
+            emptyTitle: ar_You haven’t saved any payment methods yet
+            emptyText: |-
+              ar_You can save payment cards to your account when
+              placing an order in checkout.
+            expiredCardLabel: ar_Card Expired
+            savedCards: ar_Saved Cards
+            expiredCards: ar_Expired Cards
+            deleteCard: ar_Delete Card
+            setCardAsDefault: ar_Set as default card
+            deletePaymentMethodTitle: |-
+              ar_Are you sure you want to
+              delete your card **** {{card}}?
+            description: ar_This action cannot be undone.
+            cancel: ar_Cancel
+            setAsDefaultMethod: ar_Set as default payment method
+            manage: ar_Manage payment methods
+            messages:
+              setAsDefaultSuccess: ar_Your default payment method has been updated!
+              deletePaymentMethodSuccess: ar_Your card **** {{card}} has been deleted!
+          recent_searches:
+            title: عمليات البحث الأخيرة
+            clear: إلغاء
+          appUpdate:
+            title: ar_New Update for You
+            description: |-
+              ar_We have made a few important updates
+               to the “Brand Name” App.
+
+              Please update your app, to enjoy shopping with us.
+            updateNow: ar_Update Now
+            updateLater: ar_Update Later
+          row: بعض نص الصف
+          categories:
+            search_bar_placeholder: ابدأ الكتابة للبحث
+          mapClickAndCollect:
+            listView: ar_List View
+            mapView: ar_Map View
+            collectIn: ar_Collect in {{deliveryTimeLabel}}
+            collectInFor: ar_Collect in {{deliveryTimeLabel}} for {{collectionFee}}
+            distanceInKm: ar_{{distance}} km
+            collectionAddress: ar_Collection Address
+            store: ar_Store
+            collectionPoint: ar_Collection Point
+            selectStore: ar_Select store
+            stores: ar_Stores
+            all: ar_All
+            getDirections: ar_Get directions
+          column_3: نص العمود 3
+          column_2: نص العمود 2
+          maintenanceErrorPage:
+            title: ar_We’ll Be Back Soon
+            line1: ar_We are currently performing scheduled maintenance on our website.
+            line2: ar_Thank you for your patience while we make these changes.
+          column_1: نص العمود 1
+          orderTotalSummary:
+            title: ar_Order Summary
+            paidUsing: ar_Paid using {{paymentMethod}}
+            subTotal: ar_Sub Total
+            discount: ar_Discount
+            delivery: ar_Delivery
+            total: ar_Total Paid
+            saved: ar_You saved {{discount}}
+          orderDetailsCard:
+            orderNo: 'ar_Order no: '
+            orderDate: 'ar_Order Date: '
+            link: ar_View More
+            linkExpanded: ar_View Less
+            contactInfo: ar_Contact Information
+            deliveryInfo: ar_Delivery Information
+            collectionInfo: ar_Collection Information
+            billingAddress: ar_Billing Address
+            deliveryMethod:
+              home_delivery: ar_Home Delivery
+          heading: مرحبا بك في البيت
+          language_selection:
+            header: اختر اللغة المفضلة
+            next: التالي
+            save: يحفظ
+          secureCheckout:
+            signIn: ar_Sign in
+            signInSubTitle: ar_Already got an H&M account already? Sign in and checkout faster
+            signInSignUp: ar_Sign in / Register to start enjoing your offers
+            signInSignUpSubTitle: 'ar_Get membership benefits within one click get '
+            registerAndFirstOrder: ar_Register and get 10% off your first order
+            registerAndFirstOrderSubTitle: ar_Pay AED 594.10 instead of AED 660.66 on your
+              first cart
+            guestCheckout: ar_Guest Checkout
+            guestCheckoutSubtitle: ar_Buy now. You can always create an account later
+            selectDeliveryMethod: ar_Select Delivery Method
+            homeDelivery: ar_Home Delivery
+            standardOrExpediteDelivery: ar_Standard or expedite delivery
+            clickCollect: ar_Click&Collect
+            orderCollectFromSoreOfYourChoice: ar_Order collect from a store of your choice
+            price: ar_From {{price}}
+            free: ar_Free
+            priceDiscount: ar_You saved
+            subTotal: ar_Sub Total
+            youSaved: ar_You saved
+            eGift: ar_Will be paid with eGift Card
+            discount: ar_Discount
+            surcharge: ar_COD service charge
+            tooltip: ar_[Additional AED 0.99 Service Charge] Pay for your order upon delivery
+            delivery: ar_Delivery
+            total: ar_Total
+            howToHM: ar_How to H&M?
+            gotHMAccountAlready: ar_Got a H&M account already? Checkout faster with saved
+              details
+            signUpTodayToStartEnjoyingYourOffers: ar_Sign up today to start enjoying your
+              offers
+            allGoodForNow: ar_All good for now. You can always create an account
+            paymentMethod: ar_Payment Method
+            selectPaymentMethodButton: ar_Select your payment method
+            selectPaymentMethodTitle: ar_Select Payment Method
+            save: ar_Save
+            products: ar_Products
+            contactInformation: ar_Contact Information
+            contactInformationDescription: ar_Tell us some details to contact you
+            selectShippingMethod: ar_Select Delivery Option
+            billingAddress: ar_Billing Address
+            tellUsSomeDetailsToContactYou: ar_Tell us some details to contact you
+            applePay: ar_Apple Pay
+            addCreditCard: ar_Add Credit or Debit Card
+            deliveryOption: ar_Delivery Option
+            orderSummary: ar_Order Summary
+            vatDescription: "{{vatInfo}}\n \nBy placing your order, you agree to our Privacy
+              Policy and Terms & Conditions. Read our Return Policy here."
+            payNow: ar_Pay Now
+            eGiftSection: ar_eGift Card
+            eGiftSectionNavigation: ar_Add eGift Card
+            contactInformationDetails: ar_Contact Information Details
+            sameContactInformation: ar_Same contact information as already provided
+            errors:
+              '400':
+                ERROR_CART_SHIPPING_METHOD_IS_MISSING:
+                  text: ar_The shipping method is missing.
+                ERROR_SHIPPING_METHOD_NOT_AVAILABLE:
+                  text: ar_Selected delivery method is not available anymore. Please select
+                    another delivery method.
+                ERROR_EMAIL_WRONG_FORMAT:
+                  text: ar_Email has a wrong format.
+                ERROR_INVALID_BILLING_OR_CONTACT_ADDRESS_INFORMATION:
+                  text: ar_Billing or contact info was not updated or invalid.
+          changePassword:
+            currentPasswordInputLabel: ar_Current Password
+            newPasswordInputLabel: ar_New Password
+            confirmNewPasswordInputLabel: ar_Confirm New Password
+            submit: ar_Submit
+            messageTitle: ar_Your password has been changed
+            messageText: ar_Login using it to enjoy your personalized experienced
+            wrongCurrentPasswordError: ar_This password doesn’t match this account
+            wrongNewPasswordError: ar_You cannot enter your earlier password
+          orderDetails:
+            help: ar_Help & Support
+            helpSubtitle: ar_Visit our FAQ and Help section
+            giftCard: ar_eGift Card sent to {{email}}
+          contactInformation:
+            contactInformation: ar_Contact Information
+            pleaseEnterAllField: ar_Please enter all fields and we will keep you updated on
+              your order.
+            firstName: الاسم الأول
+            lastName: اسم العائلة
+            email: البريد الإلكتروني
+            mobile: التليفون المحمول
+            WeWillSendYouText: ar_We will send you a text when the order is ready to collect
+          product_subcategories:
+            view_all: عرض الكل
+          privacy_policy: سياسة خاصة
+          signIn:
+            firstTitle: ar_Registered members get more...
+            description: ar_Shop now and pay later, collect points on every purchase and enjoy
+              exclusive discounts, rewards and events.
+            secondTitle: ar_Some of our perks
+            list:
+              line1: ar_Receive offers tailored to you
+              line2: ar_Save your delivery details for faster checkout
+              line3: ar_Track orders and be first to know when new stock drops
+            emailButton: ar_Continue with email
+            appleButton: ar_Continue with Apple
+            facebookButton: ar_Continue with Facebook
+            googleButton: ar_Continue with Google
+            or: ar_or
+            authenticationFailed: ar_Authentication failed
+            noFingerprint: ar_Unfortunately we couldn’t sign you in. Please configure a fingerprint
+              and try again
+          addPaymentCard:
+            saveCardSwitchLabel: ar_Save this card for future transactions
+            saveCardSwitchSublabel: ar_Will be set automatically as Default
+            setAsDefaultSwitchLabel: ar_Set as default payment method
+            submitButtonLabel: ar_Save
+          search_input:
+            clear: إلغاء
+            return_button_label: البحث
+          input_label: تسمية الإدخال
+          error_view:
+            offline_title: ar_Problem Connecting
+            offline_text: ar_Please, check your internet connection and try again.
+            404_title: ar_We're Sorry!
+            404_text: ar_We've recently made some changes to the app and apologise if this
+              is not the page you expected.
+            other_errors_title: ar_Oops!
+            other_errors_text: ar_Sorry, something went wrong on our end. We’re working on
+              fixing the problem. Please, try again.
+            continue_shopping: ar_Continue Shopping
+            try_again: ar_Try again
+          creditCard:
+            tooltip: ar_This code is a three or four digit number printed on the front or
+              back of the credit card
+            description: ar_We accept Visa, Mastercard, and Amex.
+            cardNumberLabel: ar_Card number
+            expiryDateLabel: ar_Expiry date
+            cvvLabel: ar_CVV
+            expiryDatePlaceholder: MM/YY
+            errors:
+              '400':
+                ERROR_CARD_NUMBER_IS_EMPTY:
+                  text: ar_Card number is empty.
+                ERROR_CARD_NUMBER_IS_NULL:
+                  text: ar_Card number is NULL.
+                ERROR_CARD_NUMBER_INVALID:
+                  text: ar_Card number is invalid.
+                ERROR_CARD_EXPIRATION_MONTH_IS_INVALID:
+                  text: ar_Expiration month of card is invalid.
+                ERROR_CARD_EXPIRATION_YEAR_IS_INVALID:
+                  text: ar_Expiration year of card is invalid.
+                ERROR_CVV_INVALID:
+                  text: ar_Cvv of card is invalid.
+                ERROR_CARD_EXPIRED:
+                  text: ar_Card expired.
+                ERROR_PARAM_NOT_VALID:
+                  text: ar_Parameter '{{paramName}}' is invalid
+                ERROR_PAYMENT_METHOD_NOT_AVAILABLE:
+                  text: ar_Requested payment method is not available.
+                ERROR_SHIPPING_METHOD_NOT_UPDATED:
+                  text: ar_Cart has no items to pay for.
+                ERROR_CART_HAS_NO_ITEMS_TO_PAY_FOR:
+                  text: ar_Shipping method was not updated.
+              '404':
+                ERROR_CART_NOT_FOUND:
+                  text: ar_Cart was not found.
+              '406':
+                ERROR_TRANSACTION_CANT_BE_DONE:
+                  text: ar_Transaction has been declined. Please try again later.
+              '500':
+                ERROR_INTERNAL_SERVER:
+                  text: ar_System error occurred.
+              '504':
+                ERROR_CONNECTION_TIMEOUT:
+                  text: ar_Connection timeout failed.
+          myAccount:
+            help: ar_Help & Support
+            store: ar_Store Locator
+            about: ar_About Us
+            settings: ar_Settings
+            orders: ar_My Orders
+            details: ar_My Details
+            reviews: ar_My Reviews ?
+            changePassword: ar_Change Password
+            address: ar_Address Book
+            payment: ar_Payment Methods
+            offers: ar_Exclusive Offers & Benefits
+            egift: ar_eGift Cards
+            signOut: ar_Sign out
+            signIn: ar_Sign In
+            register: ar_Register
+            welcome: ar_Welcome to H&M
+          register:
+            registerButton: تسجيل
+            policyText: " ar_By registering, you agree to our"
+            policyLink: ar_Terms & Conditions
+            firstNameInputLabel: الاسم الأول
+            lastNameInputLabel: اسم العائلة
+            passwordInputLabel: كلمة السر
+            headerTitleFirst: ar_Looks like you don’t have an account using
+            headerTitleSecond: ar_Let’s create one!
+            completeRegistrationTitle: ar_Complete registration for
+            checkboxLabel: ar_Yes I want to stay in touch with all the latest offers, style
+              updates and special invites to sales and events via email.
+  whenGetBrandTranslation_thenReturnTranslationAsJson:
+    parameters:
+      brand: testBrand
+      translation:
+        id:
+          id: hm-ar
+          brand: hm
+          language: ar
+        brand: hm
+        language: ar
+        translation:
+          resetPassword:
+            newPasswordInputLabel: ar_New Password
+            confirmNewPasswordInputLabel: ar_Confirm New Password
+            submit: ar_Submit
+            message: ar_Your password has been changed
+            messageDescription: ar_Login using it to enjoy your personalized experience
+          favourites:
+            emptyTitle: لم تقم بحفظ أي منتجات بعد
+            emptyDescription: |-
+              تمكن من حفظ المنتجات بشكل دائم، والتفاعل مع أي منتج تريد من
+              خلال تسجيل دخولك، أو إنشاء حساب
+            continueShopping: تابع التسوق
+            moveToBag: انتقل إلى الحقيبة
+            colour: 'ar_Colour: '
+            size: ar_Size
+            messages:
+              maximumFavorites: ar_Sorry, we can't add this item. Please remove an existing
+                item from your favourites list and try again.
+              favoritesSizeError: ar_Sorry, your favourites limit has been exceeded. Please
+                review your favourites before moving to shopping bag.
+              itemRemoved: ar_Item has been removed.
+          eGift:
+            cardNumberTitle: ar_Please specify your eGift Card number to use it
+            cardNumberInputLabel: ar_eGift Card Number
+            otpTitle: ar_Please enter OTP sent to email linked with eGift Card
+            otpInputLabel: ar_Verification Code
+            otpNotReceived: ar_Didn’t recieve OTP code?
+            resendTitle: ar_Didn't receive OTP code?
+            resend: ar_RE-SEND
+            useAnotherCard: ar_Use another card
+            amountTitle: ar_Amount you want to spend
+            paidTitle: ar_Will be paid with eGift card
+            remainPaidTitle: ar_Remains to Pay
+            addSuccessMessage: ar_eGift Card Verified and Added
+            remainCardBalance: ar_Card balance after payment will be {{balance}}
+            willBePaidSubtitle: ar_Will be paid with eGift card
+            canBePaidSubtitle: ar_Can be paid with eGift card
+            removeEgift: ar_Remove eGift card
+            removeSuccessMessage: ar_eGift card has been removed from checkout
+            extraPaymentMessage: ar_Pay {{price}} using another payment option to complete
+              purchase
+            checkBalanceAnotherCard: ar_Check Balance or Top Up Another eGift Card
+            availableAmount: ar_Available Amount
+            eGiftCard: ar_eGift Card
+            expiresOn: ar_Expires on
+            nullBalanceLinked: ar_You have eGift card linked. Card balance is AED 0. Top up
+              to use it
+            nullBalanceLinkedMessage: ar_Card balance is {{balance}}. Top up it to use
+            expiredLinked: ar_You linked eGift card expired. Add another one to use
+            expiredLinkedMessage: ar_eGift card expired and cannot be used
+          emailVerification:
+            description: ar_Let’s check if you have an account with us...
+            button: ar_Submit
+          about:
+            followUs: تابعنا
+            privacy_policy: سياسة خاصة
+            termsConditions: الأحكام والشروط
+          storeDetails:
+            holiday: ar_Holiday
+            getDirections: ar_Get directions
+          navigation:
+            home: الصفحة الرئيسية
+            productList: قائمة المنتجات
+            localization: الموقع
+            settings: إعدادات التطبيق
+            productCategories: البحث
+            favourites: مفضلتي
+            moreHome: حسابي
+            moreSettings: إعدادات
+            languageSettings: لغة
+            countrySettings: الدولة
+            productsFilters: الفرز والترتيب
+            productDetailInfo: جتنملا ليصافت
+            deliveryOptions: خيارات التوصيل
+            secureCheckout: ar_Secure Checkout
+            mainHome: المنزل
+            magazineDetails: مجلة
+            signIn: ar_Sign in / Register
+            myAccountHome: ar_My Account
+            emailVerification: ar_Let's Check
+            register: كباسح ئشنأ
+            shoppingCart: سلة التسوق
+            shoppingCartCoupon: ar_Apply Promo Code
+            resetPassword: ar_Change Password
+            changePassword: ar_Change Password
+            secureCheckoutPaymentMethod: ar_Payment Method
+            secureCheckoutAddPaymentCard: ar_Add Payment Card
+            forgotPassword: ar_Forgot Password?
+            signInWithEmail: ar_Sign in
+            homeDelivery: ar_Home Delivery
+            myOrders: ar_My Orders
+            addressBook: نيوانعلا ليلد
+            editAddress: ar_Edit Address
+            myDetails: ar_My Details
+            shoppingCartDetails: ar_Products
+            shippingMethod: ar_Shipping Method
+            billingAddress: ar_Billing Address
+            paymentMethods: ar_Payment Methods
+            orderDetails: ar_Order Details
+            mapClickAndCollect: ar_Click&Collect
+            completeRegistration: ar_completeRegistration
+            storeDetails: ar_Location Details
+            helpSupport: ar_Help & Support
+            eGiftAdd: ar_Add eGift Card
+            eGiftVerify: ar_Verify eGift Card
+            eGiftAmount: ar_Specify Amount
+            eGiftBalance: ar_eGift Card
+            eGiftRedeemedAmount: ar_Specify Amount
+            secureCheckoutPaymentCards: ar_My Payment Cards
+            eGiftAmountOTP: ar_Confirm spending
+            returnsAndRefunds: ar_Returns and Refunds
+            giftCardPersonalisationOptions: ar_Card Personalisation
+            giftCardPersonalisationOther: ar_Card Personalisation
+            privacyPolicy: ar_Privacy Policy
+            termsAndConditions: ar_Terms and Conditions
+            appTermsAndConditions: ar_App Terms and Conditions
+            saleTermsAndConditions: ar_Terms and Conditions of Sale
+            about: معلومات عنا
+            externalPaymentMethods: ar_Payment Details
+            promotions: ar_Promotions
+            deliveryInformation: ar_Delivery Information
+            sizeGuide: ar_Size Guide
+            faqs: ar_FAQs
+            storeLocator: ar_Store Locator
+            contactUs: اتصل بنا
+            productDetailsDeliveryShippingInfo: ar_Delivery Information
+            orderConfirmationCartDetails: ar_My Order
+          signInWithEmail:
+            title: ar_Looks like we already know you {{email}}. Enter your password.
+            buttonTitle: ar_Sign in
+            inputLabel: ar_Password
+            forgotPassword: ar_Forgot password?
+            error: ar_Wrong password. Try again or click Forgot password to reset it.
+          eGiftCard:
+            cardPersonalization: إضفاء الطابع الشخصي على البطاقة
+            other: آخر
+            amount: المبلغ درهم
+            enterValue: ar_Enter your value
+            selectOption: ar_Select a personalization option
+            title: بطاقة الشايع الإلكترونية
+            cardStyle: نمط البطاقة
+            giftFor: هذه هدية ل
+            forMe: ar_This is for me, {{email}}
+            cardAddedTitle: وأضافت البند إلى حقيبة التسوق
+            cardAddedDescription: سنعقده لمدة ساعة!
+          payment:
+            subTotal: ar_Sub total
+            discount: ar_Discount
+            deliveryFee: ar_Delivery fee
+            standardDelivery: ar_Standard delivery
+            ArrivesIn: ar_Arrives in {{days}} days
+            total: ar_Total
+            label: ar_M.H. Alshaya H&M
+            KWD: ar_KWD
+          productFilters:
+            sortBy: Sort By(ar)
+            button:
+              results: "{{productsCount}} النتائج"
+              save: حفظ
+              clear: إلغاء
+              selectAll: اختر الكل
+          giftCardPersonalisationOther:
+            title: ar_Please enter information about a person whom are you going to give a
+              gift
+            from: ar_From Whom
+            name: ar_Recipient Name
+            email: ar_Recipient Email
+            message: ar_Personalized Message
+          orderDetailsStatus:
+            steps:
+              home_delivery:
+                - title: ar_Order Confirmed
+                  subnote: ar_Order placed on {{orderCreationDate}}
+                - title: ar_Processing
+                  subnote: ar_Your order is being prepared
+                - title: ar_Dispatched
+                  subnote: 'ar_Delivering by {{carrierName}}, track id: {{trackId}}'
+                - title: ar_Delivered
+                  subnote: ar_Arrived on {{arrivalDate}}
+              ship_to_store:
+                - title: ar_Order Confirmed
+                  subnote: ar_Order placed on {{orderCreationDate}}
+                - title: ar_Processing
+                  subnote: ar_Your order is being prepared
+                - title: ar_Ready for Collection
+                  subnote: ar_Collect at {{storeName}}, {{storeAddress}}
+                - title: ar_Collected
+                  subnote: ar_Collected on {{collectionDate}}
+              virtual:
+                - title: ar_Order Confirmed
+                  subnote: ar_Order placed on {{orderCreationDate}}
+                - title: ar_Processing
+                  subnote: ar_Your order is being prepared
+                - title: ar_Collected
+                  subnote: ar_Collected on {{collectionDate}}
+          addressBook:
+            emptyTitle: نآلا ىتح ناونع يأ ظفحت مل
+            emptyDescription: |-
+              احفظ العناوين في حسابك لتستمتع بالدفع بشكل أسرع. يمكنك
+              إضافة أو تحديث أو حذف عنوان في أي وقت.
+            addNewAddress: أضف عنوان جديد
+            addAddress: ar_Add Address
+            savedAddresses: ar_Saved Addresses
+            editAddress: ar_Edit Address
+            deleteAddress: ar_Delete Address
+            setAsDefault: ar_Set as default address
+            defaultAddressLabel: ar_Default
+            selectAction: ar_Select Action
+            deleteAddressModalTitle: ar_Are you sure you want to delete your address?
+            deleteAddressModalSubtitle: ar_This action cannot be undone.
+            cancel: ar_Cancel
+            messages:
+              setAsDefaultSuccess: ar_Your address has been updated!
+              deleteAddressSuccess: ar_Your address has been deleted!
+              editSuccess: ar_Your address has been updated!
+          validation:
+            emptyEmail: ar_Please enter your Email address
+            invalidEmail: ar_Please provide valid email
+            confirmPasswordMatch: ar_Passwords do not match
+            invalidPassword: ar_The password does not satisfy the password policies
+            emptyPassword: ar_Password field is required
+            emptyFirstName: ar_Please enter your First Name
+            invalidFirstName: ar_Please provide valid First Name
+            emptyLastName: ar_Please enter your Last Name
+            invalidLastName: ar_Please provide valid Last Name
+            emptyMobile: ar_Please enter your Mobile
+            invalidMobile: ar_Please provide valid Mobile
+            passwordTints:
+              min8: 8 أحرف بحد أدنى
+              specialCharacter1: حرف خاص
+              upperCase1: ar_1 Uppercase
+              number1: رقم واحد
+              noSpaces: بدون مسافات
+            invalidNumber: ar_Please enter a valid phone number
+            pleaseProvideValidFirstName: ar_Please provide valid First Name
+            pleaseEnterYourFirstName: ar_Please enter your First Name
+            pleaseProvideValidLastName: ar_Please provide valid Last Name
+            pleaseEnterYourLastName: ar_Please enter your Last Name
+            isNotBeEmpty: ar_Is Not Be Empty
+            invalidCreditCard: ar_Invalid card number
+            emptyCreditCard: ar_Card number field is required
+            invalidExpiryDate: ar_Invalid expiry date
+            emptyExpiryDate: ar_Expiry date field is required
+            emptyCvv: ar_CVV field is required
+            isNotValid: ar_Is not valid
+            noEnoughMoneyOnCard: ar_Cannot be higher than available
+            giftCardMessageMax: ar_Maximum 200 characters
+            invalidCardOtp: ar_Invalid verification code. Try again
+            contactMobileNumber: ar_Please enter your Mobile Number
+            contactOrderNumber: ar_Please enter your Order Number
+            contactMissingItem: ar_Please enter your Missing items
+            contactMessage: ar_Please enter your message
+          shopping_cart:
+            quantity: 'الكمية:'
+            quantityLabel: ar_Label
+            updateInBag: ةبيقحلا يف ثيدحتلا
+            checkout: إتمام عملية الشراء
+            total: مجموع
+            subTotal: ar_Sub Total
+            discount: ar_Discount
+            discountDescription: ar_You saved
+            total_explain: "(تضمين ضريبة القيمة المضافة. باستثناء التسليم)"
+            add_promo: أضف الرمز الترويجي
+            outOfStock: نفد المخزون
+            moveToFavourites: ar_Move to favourites
+            errorPromptLine1: ar_Sorry, this item is out of stock.
+            errorPromptLine2: ar_Try to choose different size or color.
+            lowStock: ar_Going fast! Only {{availableQuantity}} in stock online
+            undo: إلغاء
+            removedFromBag: تمت إزالة العنصر
+            outOfStockModalTitle: لديك عناصر من المخزون في عربة التسوق
+            outOfStockModalText: بعض المنتجات في عربة التسوق الخاصة بك غير متوفرة. سنقوم بحذفها
+              بعد المتابعة إلى إتمام عملية الشراء.
+            outOfStockModalGoToCheckout: اذهب إلى إتمام عملية الشراء
+            outOfStockModalBackToCart: العودة إلى عربة التسوق
+            partiallyOutOfStock: ar_Partially out of stock
+            outOfStockError: ar_Sorry, the products in your cart are not available. You can
+              move them to Favourites to access them easily when they are back in stock.
+            outOfStockWarning: ar_Sorry, some products in your cart are not available. You
+              can adjust these in the Bag or move to Favourites to access them easily when
+              they are back in stock.
+            moveAllToFavourites: ar_Move all to favourites
+            savedToFavourites: ar_Saved to favourites
+            availableSectionHeader: ar_Available products
+            unavailableSectionHeader: منتجات غير متوفرة
+            updateItemsQuantity: ar_Some products have been removed from your cart.
+            discountValue: You saved {{balance}}
+            addCouponHeader: ar_Enter it and earn promotions and discounts on your shopping
+              bag.
+            addCouponTitle: ar_Promo Code
+            addCouponMessage: ar_You have applied the promo code
+            removeCouponMessage: ar_You have removed the promo code
+            invalidPromoCode: ar_The promo code you entered is not valid
+          contactUs:
+            communicationChannel: حدد قناة الاتصال المفضلة لديك
+            firstName: الاسم الأول
+            lastName: الكنية
+            mobile: رقم الهاتف المحمول
+            email: عنوان البريد الإلكتروني
+            feedback: حدد التعليقات
+            type: اختر صنف
+            reasons: حدد الأسباب
+            orderNumber: رقم الأمر
+            missingItem: عناصر مفقودة
+            message: رسالتك
+            button: ظفحي
+            emailCommunication: بريد الالكتروني
+            mobileCommunication: متحرك
+            successTitle: شكرا لك على التواصل
+            successDescription: سنعود إليك في أقرب وقت ممكن.
+            successButton: ظفحي
+          settings:
+            push_notifications:
+              title: دفع الإخطارات
+              description: "‏ H&M‬ تفعيل تحديثات الأخبار من"
+            selector_section:
+              title: الإعدادات الإقليمية
+            communication:
+              title: ar_Communication Preferences
+              description: ar_Email Newsletter
+            language: لغة
+            country: دولة
+            biometricOptions: ar_Biometric Options
+            enableFaceId: ar_Enable Face Id
+            enableTouchId: ar_Enable Touch Id
+            enableBiometrics: ar_Enable Biometrics
+          helpSupport:
+            contact: ar_Contact Us
+            delivery: ar_Delivery information
+            return: ar_Return and Refunds
+            faq: ar_FAQs
+          giftCardPersonalisationForMe:
+            title: ar_Please specify name and email where we should send your eGift card
+            name: ar_Name
+          orderSummary:
+            orderSummary: ملخص الطلبية
+            totalPaid: ar_Total Paid
+            placed: ar_Placed
+            orderNo: ar_Order No
+            orderDate: ar_Order Date
+          version: الإصدار
+          regular_text: نص افتراضي ، بعض النصوص. نص افتراضي ، بعض النصوص
+          eGiftLanding:
+            buy: ar_Buy eGift card
+            link: ar_Link to account
+            styles:
+              title: ar_Alshaya eGift Cards
+              subtitle: ar_Let your loved ones enjoy the freedom of choice with the Alshaya
+                eGift Card - the perfect gift for your friends, colleagues and loved ones.
+            checkBalance:
+              title: ar_Check Card Balance
+              subtitle: ar_Keep loading your eGift card balance to use it for your purchase
+              name: ar_Check Balance
+            topUp:
+              title: ar_Top Up Card
+              subtitle: ar_Choose any of our available value options or enter a custom amount.
+              name: ar_Top Up Card
+            descriptions:
+              title: ar_Reasons you'll love our eGift cards
+              items:
+                - icon: https://ae.hm.com/sites/g/files/bndsjb1551/files/2022-04/group-8%403x.png
+                  header: ar_A card for every occasion
+                  description: ar_Pick the perfect card from a variety of options & designs
+                - icon: https://ae.hm.com/sites/g/files/bndsjb1551/files/2022-03/group-8-copy%403x%201.21.23%20PM.png
+                  header: ar_Use it online and in-store
+                  description: ar_Pay for your online order using your eGift card or in-store
+                - icon: https://ae.hm.com/sites/g/files/bndsjb1551/files/2022-03/group%403x%201.21.23%20PM.png
+                  header: ar_12 month validity
+                  description: ar_All eGift cards are valid for 12 months from the date of purchase
+                - icon: https://ae.hm.com/sites/g/files/bndsjb1551/files/2022-03/group-9-copy%403x%201.21.23%20PM.png
+                  header: ar_Link to Account
+                  description: ar_You can link your eGift card to your account for quick & easy
+                    shopping
+            faqs:
+              title: ar_eGift cards FAQs
+              items:
+                - title: ar_Where can I get my eGift card?
+                  description: ar_You can purchase an H&M eGift card directly from our sites.
+                    Choose one of the many colorful designs we have for your special occasion,
+                    whether it be for a friend, a partner, a family member, or yourself.
+                - title: ar_How fast will my eGift card be received?
+                  description: ar_Your eGift card will be sent to the recipient’s email immediately
+                    after your purchase. They will receive a confirmation email containing their
+                    eGift card number along with a scannable QR code that can be used at any
+                    of our stores. To make any online purchases, simply enter the eGift card
+                    number at the checkout page. \n  \nThe eGift card can be linked by clicking
+                    on the Link to Account button. It can then be accessed when logged in through
+                    our site or app.
+                - title: ar_Where can I use my eGift card?
+                  description: ar_You can use your eGift card at your nearest H&M store or online
+                    through our sites and apps. If you would like to gift it to someone living
+                    in another country within the region, please make sure you purchase it from
+                    our site in that country. Our e-gift cards are single currency – you cannot
+                    use them to purchase items from other countries.
+                - title: ar_Does the eGift card have a value limit?
+                  description: ar_We offer multiple value options for you to select from or
+                    you can enter a custom amount instead.
+                - title: ar_Can I use my eGift card at any H&M store or just online?
+                  description: ar_You can use your H&M eGift card at any of our stores by showing
+                    your QR code at the checkout counter. You can access it through your email
+                    or by logging into your account through our site or app.
+                - title: ar_How can I top up my eGift card or check its balance?
+                  description: ar_You can do that through the 'Check Balance' and 'Top Up Card'
+                    buttons on our eGift Card page. You can top up your card by selecting one
+                    of our available value options or by entering a custom amount, which will
+                    be reflected immediately after checkout.
+                - title: ar_How can I send an eGift card to someone?
+                  description: |-
+                    ar_1. Select a design of your liking, depending on the occasion.
+                    
+                     2. Select a value option or enter the custom amount that you would like.
+                    
+                    3. Select who you will be purchasing the eGift card for.
+                    
+                    4. Enter their details.
+                    
+                    5. You also have the option of leaving them a heartfelt message.
+          input:
+            email: ar_Email
+            WeNeedYourEmail: ar_We need your email to send you your order receipt
+          country_selection:
+            header: اختر الدولة
+            save: يحفظ
+          trending_searches:
+            title: عمليات بحث رائجةًً
+          orderConfirmation:
+            continueShopping: ar_Continue shopping
+            youMayAlsoLike: ar_You may also like
+            needSupport: ar_Need Support
+            VisitFAQ: ar_Visit out FAQ and Help section
+          giftCardPersonalisationOptions:
+            selectOption: ar_Select Personalization Option
+            gift: ar_This is a gift
+            forMe: ar_This is for me
+          listItemsCounter:
+            items: "{{count}} قطع"
+            item: "{{count}} ar_Item"
+          mapView:
+            deliveryAddress: ar_Delivery Address
+            editManually: ar_Edit manually
+            adjustPin: ar_Adjust pin
+            save: ar_Save
+            confirmPin: ar_Confirm Location Pin
+            pinError: ar_Pin outside of delivery area
+            tip: ar_Move pin to adjust
+            shareLocation: ar_Share current location
+            viewLocation: ar_View current location
+            pinPoint: ar_Pin point location on map
+            pleaseSelect: ar_Please select your {{fieldName}}
+            pleaseEnter: ar_Please enter your {{fieldName}}
+            searchPlaceholder: ar_Start typing to search
+            additionalDetailsPlaceholder: ar_Add zip code, landmark, floor, apartment, etc.
+          myOrders:
+            emptyTitle: |-
+              ar_You haven’t placed any orders
+              yet
+            emptyTitleHistory: |-
+              ar_You don’t have any
+              completed orders yet
+            emptyDescription: |-
+              ar_Once you’ve placed an order, the summary of
+              the order will be saved here for you.
+            emptyDescriptionHistory: |-
+              ar_Once you’ve an order completed, it will be listed
+              here.
+            startShopping: ar_Start shopping
+            activeOrders: ar_Active Orders
+            ordersHistory: ar_Orders History
+          change_language_button: تغيير اللغة
+          products:
+            promoLabelSave: ar_(save {{percent}}%)
+            selectSize: أضف إلى السلة
+            outOfStock: نفد المخزون
+            inStock: ةيلاملا قاروألا يف
+            add: فضأ
+            addToBag: أضف إلى السلة
+            sizeSelectorErrorText: ar_Please select Size before choosing store
+            sizeGuide: تاساقملا ليلد
+            notificationText: وأضافت البند إلى حقيبة التسوق. سنعقده لمدة ساعة!
+            viewBag: حقيبة عرض
+            addToShoppingCart:
+              errors:
+                '400':
+                  ERROR_CART_ITEM_PURCHASE_LIMIT:
+                    text: _Sorry, you have reached the purchase limit for the product
+                  ERROR_CART_ITEM_OUT_OF_STOCK:
+                    text: _Sorry the product you are trying to add went out of stock. Please
+                      try a different product
+                '500':
+                  text: _Something went wrong while adding your product. Please, try again
+                    later
+            returnsAndRefunds: ar_Returns and Refunds
+            productDetails: ar_Product Details
+            nonRefundableLabel: ar_Please note this product is not refundable
+            attributes:
+              articleNumber: ar_Article Number
+              product_feature: ar_Product Feature
+              concept: ar_Concept
+              product_environment: ar_Product Environment
+              article_pattern: ar_Article Pattern
+              article_visual_description: ar_Article Visual Description
+              washing_instructions: ar_Washing Instructions
+              style: ar_Style
+              clothing_style: ar_Clothing Style
+              neckline_style: ar_Neckline Style
+              collar_style: ar_Collar Style
+              fit: ar_Fit
+              descriptive_length: ar_Descriptive Length
+              sleeve_length: ar_Sleeve Length
+              garment_length: ar_Garment Length
+              waist_rise: ar_Waist Rise
+              composition: ar_Composition
+            buyTogetherRecommendationsTitle: ar_Complete Your Look
+            similarRecommendationsTitle: ar_You May Also Like
+            recentlyViewed: ar_Recenlty Viewed
+            vatNote: ar_All prices are inclusive of 14% VAT. Products & services that are
+              zero rated are exempt.
+            deliveryOptions: ar_Delivery Options
+            clickAndCollect: ar_Click and Collect
+            findCollectionStore: ar_Find collection store
+            notAvailable: ar_(Not available)
+          no_search_results:
+            title: نعتذر منك!
+            text: ar_We didn’t find any search results for your search on
+          termsAndConditions:
+            app: ar_App Terms and Conditions
+            sale: ar_Terms and Conditions of Sale
+          button:
+            continue: ابدأ التسوق
+            remove: إزالة
+            continueAsGuest: ar_Continue as guest
+            save: ar_SAVE
+            verify: ar_Verify
+            confirm: ar_Confirm
+            apply: ar_Apply
+            topUp: ar_Top Up
+          permissions_request:
+            enable_tracking_title: تمكين التتبع
+            allow_tracking_text: اختر "السماح بالتتبع" على الشاشة التالية للحصول على تجربة
+              تسوق مخصصة.
+            allow_personalised_offers_text: احصل على عروض مخصصة وتوصيات المنتج والعروض الترويجية
+              الحصرية
+            allow_notification_text: تلقي إشعار وتحديث لطلبك
+          forgotPassword:
+            description: ar_Please enter the email address you used to create your account,
+              and we'll send you a link to reset your password.
+            button: ar_Submit
+            message: ar_If your account is valid, an email will be sent with instructions
+              to reset your password.
+          security:
+            error:
+              title: Error
+              button: Ok
+              policy: Your device is not compatible with the app security policies
+          common:
+            item: "{{items}} ar_item"
+            items: "{{items}} دونب"
+            color: اللون
+            size: المقاس
+            qty: الكمية
+            default: ar_Default
+            expirationDateShort: ar_Exp ({{date}})
+            selectAction: ar_Select Action
+            errors:
+              default:
+                text: ar_Something went wrong
+            permissions:
+              locationPermissionTitle: ar_Enable Location Services
+              locationAppPermissionText: ar_Please go to Settings and enable location services
+                for App
+              locationDevicePermissionText: ar_Please, enable location service in your system
+                settings
+              locationPermissionCancel: ar_Cancel
+              locationPermissionOk: ar_Ok
+              locationPermissionSettings: ar_Go to settings
+              requestFaceIdPermissionsBody: ar_You can change your biometric option within
+                the App Settings
+              faceIdPermissionsTitle: ar_Enable Face ID
+              faceIdPermissionsBody: ar_To enable Face ID, you have to enable from device
+                settings
+              dontAllow: ar_Don’t Allow
+              allow: ar_Allow
+              login: ar_Login
+            add: إضافة
+            checkout: إتمام عملية الشراء
+          flow_summary:
+            title: حقيبتك فارغة
+            description: كن مصدر إلهام واكتشف شيئًا جديدًا في أحدث منتجاتنا. تبقى العناصر
+              في حقيبتك لمدة 60 دقيقة ثم يتم نقلها إلى المفضلة.
+            continue_shopping: مواصلة التسوق
+            view_my_favourites: عرض المفضلة
+            thank_for_order: ar_Thank you for your order!
+            order_will_be_sent_to: |-
+              ar_Your order has been placed
+              and receipt will be sent to {{email}}.
+            complete_registration: ar_Complete Registration
+            complete_registration_benefits: ar_Complete registration to get member benefits
+            receive: ar_Receive
+            discount: ar_10% discount
+            off_your_first_order: ar_off your first order
+            save_your_details: ar_Save your details for
+            faster_checkout: ar_faster checkout
+            tracked_orders: ar_Tracked orders
+            and: ar_and
+            free_delivery: ar_free delivery
+            viewMyOrder: ar_View my order
+          myDetails:
+            mobile: ar_Mobile number
+            email: ar_Email address
+            button: ar_Save changes
+            notification: ar_Your changes have been saved
+          input_placeholder: إدخال عنصر نائب للنص
+          paymentMethods:
+            emptyTitle: ar_You haven’t saved any payment methods yet
+            emptyText: |-
+              ar_You can save payment cards to your account when
+              placing an order in checkout.
+            expiredCardLabel: ar_Card Expired
+            savedCards: ar_Saved Cards
+            expiredCards: ar_Expired Cards
+            deleteCard: ar_Delete Card
+            setCardAsDefault: ar_Set as default card
+            deletePaymentMethodTitle: |-
+              ar_Are you sure you want to
+              delete your card **** {{card}}?
+            description: ar_This action cannot be undone.
+            cancel: ar_Cancel
+            setAsDefaultMethod: ar_Set as default payment method
+            manage: ar_Manage payment methods
+            messages:
+              setAsDefaultSuccess: ar_Your default payment method has been updated!
+              deletePaymentMethodSuccess: ar_Your card **** {{card}} has been deleted!
+          recent_searches:
+            title: عمليات البحث الأخيرة
+            clear: إلغاء
+          appUpdate:
+            title: ar_New Update for You
+            description: |-
+              ar_We have made a few important updates
+               to the “Brand Name” App.
+              
+              Please update your app, to enjoy shopping with us.
+            updateNow: ar_Update Now
+            updateLater: ar_Update Later
+          row: بعض نص الصف
+          categories:
+            search_bar_placeholder: ابدأ الكتابة للبحث
+          mapClickAndCollect:
+            listView: ar_List View
+            mapView: ar_Map View
+            collectIn: ar_Collect in {{deliveryTimeLabel}}
+            collectInFor: ar_Collect in {{deliveryTimeLabel}} for {{collectionFee}}
+            distanceInKm: ar_{{distance}} km
+            collectionAddress: ar_Collection Address
+            store: ar_Store
+            collectionPoint: ar_Collection Point
+            selectStore: ar_Select store
+            stores: ar_Stores
+            all: ar_All
+            getDirections: ar_Get directions
+          column_3: نص العمود 3
+          column_2: نص العمود 2
+          maintenanceErrorPage:
+            title: ar_We’ll Be Back Soon
+            line1: ar_We are currently performing scheduled maintenance on our website.
+            line2: ar_Thank you for your patience while we make these changes.
+          column_1: نص العمود 1
+          orderTotalSummary:
+            title: ar_Order Summary
+            paidUsing: ar_Paid using {{paymentMethod}}
+            subTotal: ar_Sub Total
+            discount: ar_Discount
+            delivery: ar_Delivery
+            total: ar_Total Paid
+            saved: ar_You saved {{discount}}
+          orderDetailsCard:
+            orderNo: 'ar_Order no: '
+            orderDate: 'ar_Order Date: '
+            link: ar_View More
+            linkExpanded: ar_View Less
+            contactInfo: ar_Contact Information
+            deliveryInfo: ar_Delivery Information
+            collectionInfo: ar_Collection Information
+            billingAddress: ar_Billing Address
+            deliveryMethod:
+              home_delivery: ar_Home Delivery
+          heading: مرحبا بك في البيت
+          language_selection:
+            header: اختر اللغة المفضلة
+            next: التالي
+            save: يحفظ
+          secureCheckout:
+            signIn: ar_Sign in
+            signInSubTitle: ar_Already got an H&M account already? Sign in and checkout faster
+            signInSignUp: ar_Sign in / Register to start enjoing your offers
+            signInSignUpSubTitle: 'ar_Get membership benefits within one click get '
+            registerAndFirstOrder: ar_Register and get 10% off your first order
+            registerAndFirstOrderSubTitle: ar_Pay AED 594.10 instead of AED 660.66 on your
+              first cart
+            guestCheckout: ar_Guest Checkout
+            guestCheckoutSubtitle: ar_Buy now. You can always create an account later
+            selectDeliveryMethod: ar_Select Delivery Method
+            homeDelivery: ar_Home Delivery
+            standardOrExpediteDelivery: ar_Standard or expedite delivery
+            clickCollect: ar_Click&Collect
+            orderCollectFromSoreOfYourChoice: ar_Order collect from a store of your choice
+            price: ar_From {{price}}
+            free: ar_Free
+            priceDiscount: ar_You saved
+            subTotal: ar_Sub Total
+            youSaved: ar_You saved
+            eGift: ar_Will be paid with eGift Card
+            discount: ar_Discount
+            surcharge: ar_COD service charge
+            tooltip: ar_[Additional AED 0.99 Service Charge] Pay for your order upon delivery
+            delivery: ar_Delivery
+            total: ar_Total
+            howToHM: ar_How to H&M?
+            gotHMAccountAlready: ar_Got a H&M account already? Checkout faster with saved
+              details
+            signUpTodayToStartEnjoyingYourOffers: ar_Sign up today to start enjoying your
+              offers
+            allGoodForNow: ar_All good for now. You can always create an account
+            paymentMethod: ar_Payment Method
+            selectPaymentMethodButton: ar_Select your payment method
+            selectPaymentMethodTitle: ar_Select Payment Method
+            save: ar_Save
+            products: ar_Products
+            contactInformation: ar_Contact Information
+            contactInformationDescription: ar_Tell us some details to contact you
+            selectShippingMethod: ar_Select Delivery Option
+            billingAddress: ar_Billing Address
+            tellUsSomeDetailsToContactYou: ar_Tell us some details to contact you
+            applePay: ar_Apple Pay
+            addCreditCard: ar_Add Credit or Debit Card
+            deliveryOption: ar_Delivery Option
+            orderSummary: ar_Order Summary
+            vatDescription: "{{vatInfo}}\n \nBy placing your order, you agree to our Privacy
+               Policy and Terms & Conditions. Read our Return Policy here."
+            payNow: ar_Pay Now
+            eGiftSection: ar_eGift Card
+            eGiftSectionNavigation: ar_Add eGift Card
+            contactInformationDetails: ar_Contact Information Details
+            sameContactInformation: ar_Same contact information as already provided
+            errors:
+              '400':
+                ERROR_CART_SHIPPING_METHOD_IS_MISSING:
+                  text: ar_The shipping method is missing.
+                ERROR_SHIPPING_METHOD_NOT_AVAILABLE:
+                  text: ar_Selected delivery method is not available anymore. Please select
+                    another delivery method.
+                ERROR_EMAIL_WRONG_FORMAT:
+                  text: ar_Email has a wrong format.
+                ERROR_INVALID_BILLING_OR_CONTACT_ADDRESS_INFORMATION:
+                  text: ar_Billing or contact info was not updated or invalid.
+          changePassword:
+            currentPasswordInputLabel: ar_Current Password
+            newPasswordInputLabel: ar_New Password
+            confirmNewPasswordInputLabel: ar_Confirm New Password
+            submit: ar_Submit
+            messageTitle: ar_Your password has been changed
+            messageText: ar_Login using it to enjoy your personalized experienced
+            wrongCurrentPasswordError: ar_This password doesn’t match this account
+            wrongNewPasswordError: ar_You cannot enter your earlier password
+          orderDetails:
+            help: ar_Help & Support
+            helpSubtitle: ar_Visit our FAQ and Help section
+            giftCard: ar_eGift Card sent to {{email}}
+          contactInformation:
+            contactInformation: ar_Contact Information
+            pleaseEnterAllField: ar_Please enter all fields and we will keep you updated on
+              your order.
+            firstName: الاسم الأول
+            lastName: اسم العائلة
+            email: البريد الإلكتروني
+            mobile: التليفون المحمول
+            WeWillSendYouText: ar_We will send you a text when the order is ready to collect
+          product_subcategories:
+            view_all: عرض الكل
+          privacy_policy: سياسة خاصة
+          signIn:
+            firstTitle: ar_Registered members get more...
+            description: ar_Shop now and pay later, collect points on every purchase and enjoy
+              exclusive discounts, rewards and events.
+            secondTitle: ar_Some of our perks
+            list:
+              line1: ar_Receive offers tailored to you
+              line2: ar_Save your delivery details for faster checkout
+              line3: ar_Track orders and be first to know when new stock drops
+            emailButton: ar_Continue with email
+            appleButton: ar_Continue with Apple
+            facebookButton: ar_Continue with Facebook
+            googleButton: ar_Continue with Google
+            or: ar_or
+            authenticationFailed: ar_Authentication failed
+            noFingerprint: ar_Unfortunately we couldn’t sign you in. Please configure a fingerprint
+              and try again
+          addPaymentCard:
+            saveCardSwitchLabel: ar_Save this card for future transactions
+            saveCardSwitchSublabel: ar_Will be set automatically as Default
+            setAsDefaultSwitchLabel: ar_Set as default payment method
+            submitButtonLabel: ar_Save
+          search_input:
+            clear: إلغاء
+            return_button_label: البحث
+          input_label: تسمية الإدخال
+          error_view:
+            offline_title: ar_Problem Connecting
+            offline_text: ar_Please, check your internet connection and try again.
+            404_title: ar_We're Sorry!
+            404_text: ar_We've recently made some changes to the app and apologise if this
+              is not the page you expected.
+            other_errors_title: ar_Oops!
+            other_errors_text: ar_Sorry, something went wrong on our end. We’re working on
+              fixing the problem. Please, try again.
+            continue_shopping: ar_Continue Shopping
+            try_again: ar_Try again
+          creditCard:
+            tooltip: ar_This code is a three or four digit number printed on the front or
+              back of the credit card
+            description: ar_We accept Visa, Mastercard, and Amex.
+            cardNumberLabel: ar_Card number
+            expiryDateLabel: ar_Expiry date
+            cvvLabel: ar_CVV
+            expiryDatePlaceholder: MM/YY
+            errors:
+              '400':
+                ERROR_CARD_NUMBER_IS_EMPTY:
+                  text: ar_Card number is empty.
+                ERROR_CARD_NUMBER_IS_NULL:
+                  text: ar_Card number is NULL.
+                ERROR_CARD_NUMBER_INVALID:
+                  text: ar_Card number is invalid.
+                ERROR_CARD_EXPIRATION_MONTH_IS_INVALID:
+                  text: ar_Expiration month of card is invalid.
+                ERROR_CARD_EXPIRATION_YEAR_IS_INVALID:
+                  text: ar_Expiration year of card is invalid.
+                ERROR_CVV_INVALID:
+                  text: ar_Cvv of card is invalid.
+                ERROR_CARD_EXPIRED:
+                  text: ar_Card expired.
+                ERROR_PARAM_NOT_VALID:
+                  text: ar_Parameter '{{paramName}}' is invalid
+                ERROR_PAYMENT_METHOD_NOT_AVAILABLE:
+                  text: ar_Requested payment method is not available.
+                ERROR_SHIPPING_METHOD_NOT_UPDATED:
+                  text: ar_Cart has no items to pay for.
+                ERROR_CART_HAS_NO_ITEMS_TO_PAY_FOR:
+                  text: ar_Shipping method was not updated.
+              '404':
+                ERROR_CART_NOT_FOUND:
+                  text: ar_Cart was not found.
+              '406':
+                ERROR_TRANSACTION_CANT_BE_DONE:
+                  text: ar_Transaction has been declined. Please try again later.
+              '500':
+                ERROR_INTERNAL_SERVER:
+                  text: ar_System error occurred.
+              '504':
+                ERROR_CONNECTION_TIMEOUT:
+                  text: ar_Connection timeout failed.
+          myAccount:
+            help: ar_Help & Support
+            store: ar_Store Locator
+            about: ar_About Us
+            settings: ar_Settings
+            orders: ar_My Orders
+            details: ar_My Details
+            reviews: ar_My Reviews ?
+            changePassword: ar_Change Password
+            address: ar_Address Book
+            payment: ar_Payment Methods
+            offers: ar_Exclusive Offers & Benefits
+            egift: ar_eGift Cards
+            signOut: ar_Sign out
+            signIn: ar_Sign In
+            register: ar_Register
+            welcome: ar_Welcome to H&M
+          register:
+            registerButton: تسجيل
+            policyText: " ar_By registering, you agree to our"
+            policyLink: ar_Terms & Conditions
+            firstNameInputLabel: الاسم الأول
+            lastNameInputLabel: اسم العائلة
+            passwordInputLabel: كلمة السر
+            headerTitleFirst: ar_Looks like you don’t have an account using
+            headerTitleSecond: ar_Let’s create one!
+            completeRegistrationTitle: ar_Complete registration for
+            checkboxLabel: ar_Yes I want to stay in touch with all the latest offers, style
+              updates and special invites to sales and events via email.

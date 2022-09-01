@@ -1,0 +1,35 @@
+management:
+  endpoint:
+    health:
+      enabled: true
+      probes:
+        enabled: false
+      show-details: always
+spring:
+  webflux:
+    base-path: /${spring.application.name}
+  data:
+    mongodb:
+      uri: ${AZURE_MONGO_CONNECTION_STRING}
+      database: ${AZURE_COSMOS_DB_NAME}
+  application:
+    name: localization-service
+cache:
+  time-to-live-seconds: ${CACHE_TO_LIVE_SECONDS:4320000}
+  instance:
+    name: ${spring.application.name}
+  pre-loading:
+    enabled: true
+
+springfox:
+  documentation:
+    open-api:
+      v3:
+        path: /v3/springfox/api-docs
+
+microservice:
+  endpoints:
+    default:
+      logging:
+        enabled: ${ENDPOINTS_LOGGING_ENABLED:true}
+        include-method-arg: ${ENDPOINTS_LOGGING_INCLUDE_METHOD_ARG:true}

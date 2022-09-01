@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FindBugsFilter>
+    <Match>
+        <Bug pattern="EI_EXPOSE_REP"/>
+    </Match>
+
+    <Match>
+        <Bug pattern="EI_EXPOSE_REP2"/>
+    </Match>
+
+    <Match>
+        <Bug pattern="SE_NO_SERIALVERSIONID"/>
+    </Match>
+
+    <Match>
+        <Bug pattern="SPRING_ENDPOINT"/>
+    </Match>
+
+    <Match>
+        <Bug pattern="SIC_INNER_SHOULD_BE_STATIC_ANON"/>
+    </Match>
+
+    <Match>
+        <Bug pattern="NM_CONFUSING"/>
+    </Match>
+
+    <Match>
+        <Bug pattern="CRLF_INJECTION_LOGS"/>
+    </Match>
+
+    <Match>
+        <Bug pattern="FORMAT_STRING_MANIPULATION"/>
+    </Match>
+
+    <Match>
+        <Bug pattern="UPM_UNCALLED_PRIVATE_METHOD"/>
+    </Match>
+
+    <Match>
+        <Bug pattern="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE"/>
+    </Match>
+
+    <Match>
+        <Bug pattern="BC_UNCONFIRMED_CAST"/>
+    </Match>
+
+    <!--Spotbugs does not support java.util.Objects.requireNonNull()-->
+    <Match>
+        <Bug pattern="NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE"/>
+        <Class name="com.alshaya.microservice.bff.mobile.exception.handlers.GlobalExceptionAttributeHandler"/>
+    </Match>
+
+    <Match>
+        <Bug pattern="REC_CATCH_EXCEPTION"/>
+        <Class name="com.alshaya.microservice.bff.mobile.controller.mapper.payment.PaymentMethodMapper"/>
+    </Match>
+
+    <!--Excluded generated mapper-->
+    <Match>
+        <Bug pattern="NP_LOAD_OF_KNOWN_NULL_VALUE"/>
+        <Class name="com.alshaya.microservice.bff.mobile.mapper.search.ProductSearchParamsMapperImpl"/>
+    </Match>
+    <Match>
+        <Bug pattern="NP_BOOLEAN_RETURN_NULL"/>
+        <Class name="com.alshaya.microservice.bff.mobile.mapper.magento.delivery_address.MagentoDeliveryAddressMapperImpl"/>
+    </Match>
+
+    <Match>
+        <Bug pattern="NP_NULL_ON_SOME_PATH"/>
+        <Class name="com.alshaya.microservice.bff.mobile.mapper.user.UserMapperImpl"/>
+    </Match>
+    <Match>
+        <Bug pattern="NP_BOOLEAN_RETURN_NULL"/>
+        <Class name="com.alshaya.microservice.bff.mobile.mapper.user.UserMapperImpl"/>
+    </Match>
+
+    <!--Spotbugs alerts mapstruct implementation-->
+    <Match>
+        <Bug pattern="UC_USELESS_VOID_METHOD"/>
+        <Class name="com.alshaya.microservice.bff.mobile.controller.mapper.payment.PaymentMethodMapperImpl"/>
+    </Match>
+</FindBugsFilter>

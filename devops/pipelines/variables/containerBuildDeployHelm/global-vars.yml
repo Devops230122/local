@@ -1,0 +1,18 @@
+variables:
+# System
+- name: qaEnvironment
+  value: localization-service-qa
+- name: uatEnvironment
+  value: localization-service-uat
+- name: prdEnvironment
+  value: localization-service-prd
+# Artifact
+- name: artifactName
+  value: localization-service
+# Docker
+- name: containerRepository
+  value: localization
+# Helm
+- name: releaseName
+  value: localization
+

@@ -1,0 +1,8 @@
+testMethods:
+  verifyWhetherRetrievalRequestsWorkCorrectly_allRequestsExecutedCorrectly_returnTrue:
+    parameters:
+      mongoResult: 1
+      expectedResult: true
+  verifyWhetherRetrievalRequestsWorkCorrectly_allRequestsExecutedCorrectly_returnFalse:
+    parameters:
+      expectedResult: false

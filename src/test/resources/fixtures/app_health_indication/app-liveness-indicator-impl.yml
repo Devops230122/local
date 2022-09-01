@@ -1,0 +1,7 @@
+testMethods:
+  health_allChecksPassed_statusIsUp:
+    parameters:
+      resultOfDataConnectionCheck: true
+  health_allChecksFailed_statusIsDown:
+    parameters:
+      resultOfDataConnectionCheck: false

@@ -1,0 +1,265 @@
+name: container-deploy-$(Date:yyyyMMdd)$(Rev:.r)
+
+trigger:
+  branches:
+    include:
+      - develop
+  paths:
+    exclude:
+      - devops/*
+    include:
+      - /*
+      - devops/helm/*
+
+resources:
+  repositories:
+    - repository: variable-templates
+      type: git
+      name: ACP/devops-configuration
+      ref: enterprise-dev
+    - repository: solution-pipelines
+      type: git
+      name: ACP/solution-pipelines
+      ref: enterprise-dev
+
+parameters:
+- name: isExp
+  displayName: 'Experemental environment only'
+  type: boolean
+  default: false
+
+variables:
+- template: variables/containerBuildDeployHelm/global-vars.yml@self
+- template: global/global.yml@variable-templates
+- template: global/app-global.yml@variable-templates
+
+pool:
+  vmImage: $(vmImageUbuntu)
+
+stages:
+# Experimental
+- ${{ if eq(parameters.isExp, true) }}:
+  - stage: BuildExp
+    displayName: 'Build Exp'
+    variables:
+    - template: application/exp/exp.yml@variable-templates
+    - template: iac/exp/exp-bsl.yml@variable-templates
+    - template: variables/containerBuildDeployHelm/build-vars.yml@self
+    jobs:
+    - job: Build
+      displayName: 'Build Container - Experimental'
+      steps:
+      - template: common/steps/dockerGenTag-task.yml@solution-pipelines
+
+      - template: application/steps/mavenAuth-task.yml@solution-pipelines
+        parameters:
+          artifactsFeeds: $(artifactsRepoName)
+
+      - template: common/steps/copyFiles-task.yml@solution-pipelines
+        parameters:
+          sourceFolder: $(HOME)/.m2
+          sourceFiles: settings.xml
+          targetFolder: $(Build.Repository.LocalPath)/devops
+
+      - template: common/steps/docker-task.yml@solution-pipelines
+        parameters:
+          repository: $(containerRepository)
+          containerRegistry: '$(acrServiceConnectionExp)'
+          tags: $(GenTag.ImageTagExp)
+    
+      - template: common/steps/helm/helm-install.yml@solution-pipelines
+        parameters:
+          HelmVersion: $(HelmVersion)
+
+      - template: common/steps/helm/helm-upgrade.yml@solution-pipelines
+        parameters:
+          ServiceConnection: $(ecomServiceConnectionExp)
+          ResourceGroupName: $(resourceGroupIac)
+          AksClusterName: $(clusterName)
+          ValueFile: $(ValueFile)
+          ReleaseName: $(ReleaseName)
+          ChartPath: $(ChartPath)
+          Tag: $(GenTag.ImageTagExp)        
+# Develop
+- ${{ else }}:
+  - stage: BuildDev
+    displayName: 'Build DEV'
+    variables:
+    - template: application/dev/dev.yml@variable-templates
+    - template: iac/dev/dev-bsl.yml@variable-templates
+    - template: variables/containerBuildDeployHelm/build-vars.yml@self
+    jobs:
+    - job: BuildDev
+      displayName: 'Build Container - DEV'
+      steps:
+      - template: common/steps/dockerGenTag-task.yml@solution-pipelines
+
+      - template: application/steps/mavenAuth-task.yml@solution-pipelines
+        parameters:
+          artifactsFeeds: $(artifactsRepoName)
+
+      - template: common/steps/copyFiles-task.yml@solution-pipelines
+        parameters:
+          sourceFolder: $(HOME)/.m2
+          sourceFiles: settings.xml
+          targetFolder: $(Build.Repository.LocalPath)/devops
+
+      - template: common/steps/docker-task.yml@solution-pipelines
+        parameters:
+          repository: $(containerRepository)
+          containerRegistry: '$(acrServiceConnectionDev)'
+          tags: $(GenTag.ImageTagDev)
+    
+      - template: common/steps/helm/helm-install.yml@solution-pipelines
+        parameters:
+          HelmVersion: $(HelmVersion)
+
+      - template: common/steps/helm/helm-upgrade.yml@solution-pipelines
+        parameters:
+          ServiceConnection: $(ecomServiceConnectionDev)
+          ResourceGroupName: $(resourceGroupIac)
+          AksClusterName: $(clusterName)
+          ValueFile: $(ValueFile)
+          ReleaseName: $(ReleaseName)
+          ChartPath: $(ChartPath)
+          Tag: $(GenTag.ImageTagDev)
+# QA
+  - stage: BuildQA
+    displayName: 'Build QA'
+    variables:
+    - template: application/qa/qa.yml@variable-templates
+    - template: iac/qa/qa-bsl.yml@variable-templates
+    dependsOn:
+    - BuildDev
+    jobs:
+    - deployment: deployment_qa
+      variables:
+      - name: originAcrUrl
+        value: '${{ variables.acrNameDev }}.azurecr.io'
+      - name: targetAcrUrl
+        value: '${{ variables.acrNameQa }}.azurecr.io'
+      - name: ImageTagDev
+        value: $[ stageDependencies.BuildDev.BuildDev.outputs['GenTag.ImageTagDev'] ]
+      - name: ImageTagQa
+        value: $[ stageDependencies.BuildDev.BuildDev.outputs['GenTag.ImageTagQa'] ]
+      displayName: 'Build for ${{ variables.qaEnvironment }}'
+      environment: ${{ variables.qaEnvironment }}
+      strategy:
+        runOnce:
+          deploy:
+            steps:
+            - checkout: self
+            - template: application/steps/dockerRetagWithHelm-steps.yml@solution-pipelines
+              parameters:
+                originTag: $(ImageTagDev)
+                targetTag: $(ImageTagQa)
+                originAcrUrl: $(originAcrUrl)
+                targetAcrUrl: $(targetAcrUrl)
+                sourceContainerRegistry: $(acrServiceConnectionDev)
+                destinationContainerRegistry: $(acrServiceConnectionQa)
+                sourceAcrName: $(acrNameDev)
+                imageName: $(containerRepository)
+                # helm
+                HelmVersion: $(HelmVersion)
+                ServiceConnection: $(ecomServiceConnectionQa)
+                ResourceGroupName: $(resourceGroupIac)
+                AksClusterName: $(clusterName)
+                ValueFile: $(ValueFile)
+                ReleaseName: $(ReleaseName)
+                ChartPath: $(ChartPath)
+                Tag: $(ImageTagQa)
+# UAT
+  - stage: BuildUAT
+    displayName: 'Build UAT'
+    variables:
+    - template: application/uat/uat.yml@variable-templates
+    - template: iac/uat/uat-bsl.yml@variable-templates
+    dependsOn:
+    - BuildQA
+    - BuildDev
+    jobs:
+    - deployment: deployment_uat
+      variables:
+      - name: originAcrUrl
+        value: '${{ variables.acrNameQa }}.azurecr.io'
+      - name: targetAcrUrl
+        value: '${{ variables.acrNameUat }}.azurecr.io'
+      - name: ImageTagQa
+        value: $[ stageDependencies.BuildDev.BuildDev.outputs['GenTag.ImageTagQa'] ]
+      - name: ImageTagUat
+        value: $[ stageDependencies.BuildDev.BuildDev.outputs['GenTag.ImageTagUat'] ]
+      displayName: 'Build for ${{ variables.uatEnvironment }}'
+      environment: ${{ variables.uatEnvironment }}
+      strategy:
+        runOnce:
+          deploy:
+            steps:
+            - checkout: self
+            - template: application/steps/dockerRetagWithHelm-steps.yml@solution-pipelines
+              parameters:
+                originTag: $(ImageTagQa)
+                targetTag: $(ImageTagUat)
+                originAcrUrl: $(originAcrUrl)
+                targetAcrUrl: $(targetAcrUrl)
+                sourceContainerRegistry: $(acrServiceConnectionQa)
+                destinationContainerRegistry: $(acrServiceConnectionUat)
+                sourceAcrName: $(acrNameQa)
+                imageName: $(containerRepository)
+                # helm
+                HelmVersion: $(HelmVersion)
+                ServiceConnection: $(ecomServiceConnectionUat)
+                ResourceGroupName: $(resourceGroupIac)
+                AksClusterName: $(clusterName)
+                ValueFile: $(ValueFile)
+                ReleaseName: $(ReleaseName)
+                ChartPath: $(ChartPath)
+                Tag: $(ImageTagUat)             
+# PRD
+  - stage: BuildPrd
+    displayName: 'Build Prd'
+    variables:
+    - template: application/prd/prd.yml@variable-templates
+    - template: iac/prd/prd-bsl.yml@variable-templates
+    dependsOn:
+    - BuildUAT
+    - BuildDev
+    jobs:
+    - deployment: deployment_prd
+      variables:
+      - name: originAcrUrl
+        value: '${{ variables.acrNameUat }}.azurecr.io'
+      - name: targetAcrUrl
+        value: '${{ variables.acrNamePrd }}.azurecr.io'
+      - name: ImageTagUat
+        value: $[ stageDependencies.BuildDev.BuildDev.outputs['GenTag.ImageTagUat'] ]
+      - name: ImageTagPrd
+        value: $[ stageDependencies.BuildDev.BuildDev.outputs['GenTag.ImageTagPrd'] ]
+      displayName: 'Build for ${{ variables.prdEnvironment }}'
+      environment: ${{ variables.prdEnvironment }}
+      strategy:
+        runOnce:
+          deploy:
+            steps:
+            - checkout: self
+            - template: application/steps/dockerRetagWithHelm-steps.yml@solution-pipelines
+              parameters:
+                originTag: $(ImageTagUat)
+                targetTag: $(ImageTagPrd)
+                originAcrUrl: $(originAcrUrl)
+                targetAcrUrl: $(targetAcrUrl)
+                sourceContainerRegistry: $(acrServiceConnectionUat)
+                destinationContainerRegistry: $(acrServiceConnectionPrd)
+                sourceAcrName: $(acrNameUat)
+                imageName: $(containerRepository)
+                # helm
+                HelmVersion: $(HelmVersion)
+                ServiceConnection: $(ecomServiceConnectionPrd)
+                ResourceGroupName: $(resourceGroupIac)
+                AksClusterName: $(clusterName)
+                ValueFile: $(ValueFile)
+                ReleaseName: $(ReleaseName)
+                ChartPath: $(ChartPath)
+                Tag: $(ImageTagPrd)
+
+            - task: git-tag-on-release-task@9
+              displayName: "Add Tag to git"

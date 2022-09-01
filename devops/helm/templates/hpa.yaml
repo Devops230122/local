@@ -1,0 +1,38 @@
+apiVersion: autoscaling/v2beta2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: {{ .Release.Name }}
+spec:
+  maxReplicas: {{ .Values.spec.maxReplicas }} # define max replica count
+  minReplicas: {{ .Values.spec.minReplicas }}  # define min replica count
+  metrics:
+    - resource:
+        name: memory
+        target:
+          averageUtilization: {{ .Values.resources.target.memoryAverageUtilization }}
+          type: Utilization
+      type: Resource
+    - resource:
+        name: cpu
+        target:
+          averageUtilization: {{ .Values.resources.target.cpuAverageUtilization }}
+          type: Utilization
+      type: Resource
+  behavior:
+    scaleDown:
+      stabilizationWindowSeconds: {{ .Values.stabilizationWindowSeconds }}
+      policies:
+      - type: Pods #policy type
+        value: {{ .Values.scaleDown.policies.pods.value }} #how much pod should be destroyed if the policy is true
+        periodSeconds: {{ .Values.scaleDown.policies.pods.periodSeconds }} #time duration when policy is true
+      selectPolicy: Min
+    scaleUp: 
+      policies: 
+      - type: Pods #policy type
+        value: {{ .Values.scaleUp.policies.pods.value }} #how much pod should be destroyed if the policy is true
+        periodSeconds: {{ .Values.scaleUp.policies.pods.periodSeconds }} #time duration when policy is true
+      selectPolicy: Max
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: {{ .Release.Name }}

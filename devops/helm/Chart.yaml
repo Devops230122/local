@@ -1,0 +1,6 @@
+apiVersion: v2
+name: localization-service
+description: It's Alshay's helm charts for k8s
+type: application
+version: 0.1.0
+appVersion: "1.1.0"

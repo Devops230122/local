@@ -1,0 +1,8 @@
+variables:
+# Artifacts repository
+- name: artifactsName 
+  value: alsh-maven-repo
+- name: vmImage
+  value: ubuntu-latest
+- name: dockerVersion
+  value: 17.09.0-ce

@@ -1,0 +1,44 @@
+name: maven-$(Build.SourceBranchName)-$(Date:yyyyMMdd)$(Rev:.r)
+
+trigger: none
+
+pr:
+  branches:
+    include:
+      - develop
+  paths:
+    exclude:
+      - devops/*
+
+variables:
+- template: variables/codeCheck-vars.yml@self
+
+resources:
+  repositories:
+  - repository: templates
+    type: git
+    name: ACP/solution-pipelines
+
+pool:
+  vmImage: $(vmImage)
+
+stages:
+- stage: CI_Code_Check
+  jobs:
+  - job: code_check
+    displayName: 'Code check'
+    steps:
+    - template: application/steps/mavenAuth-task.yml@templates
+      parameters:
+        artifactsFeeds: $(artifactsName)
+
+    - task: DockerInstaller@0
+      displayName: Docker Installer $(dockerVersion)
+      inputs:
+        dockerVersion: $(dockerVersion)
+        releaseType: stable
+        
+    - template: application/steps/maven-task.yml@templates
+      parameters:
+        goals: 'clean verify'
+        publishCodeCoverageResults: true
