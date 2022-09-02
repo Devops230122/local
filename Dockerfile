@@ -5,7 +5,7 @@ COPY pom.xml /app
 COPY .mvn/plugins/eclipse-java-google-style.xml /app/.mvn/plugins/
 COPY .mvn/plugins/spotbugs-exclude-filter.xml /app/.mvn/plugins/
 COPY .mvn/plugins/pmd/maven-pmd-plugin-custom-rules.xml /app/.mvn/plugins/pmd/
-#COPY devops/settings.xml /root/.m2/
+COPY devops/settings.xml /root/.m2/
 
 RUN mvn -f /app/pom.xml clean package -DskipTests
 
